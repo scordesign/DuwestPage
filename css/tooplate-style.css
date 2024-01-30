@@ -6,6 +6,23 @@ http://www.tooplate.com/view/2102-constructive
 
 */
 
+.menu-icon {
+    background: #00000000;
+    color: #ffffff;
+    cursor: pointer;
+    margin-top: 4px;
+    margin-left: 4px;
+    border-radius: 5px;
+    width: 5vw;
+    height: 6vh;
+    z-index: 1001;
+}
+
+.dropDownBar{
+    background: #00000052;
+    visibility: hidden;
+}
+
 body {
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 	font-size: 18px;
@@ -95,7 +112,7 @@ p:last-child { margin-bottom: 0; }
   position: relative;
 }
 
-#tmMainNavToggle { display: none; }
+/*#tmMainNavToggle { display: none; }*/
 
 .sidebar {
     display: -webkit-box;
@@ -162,28 +179,24 @@ p:last-child { margin-bottom: 0; }
     margin-right: 35px;
 }
 
-.tm-main-nav { font-size: 1.6rem; }
+.tm-main-nav { font-size: 1rem; }
 .tm-main-nav li { list-style: none; }
 .tm-main-nav a {
-    background-image: url(../img/nav-item.png);
-    background-repeat: no-repeat;
     background-position: left bottom;
     color: white;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
+    display: block;
     -webkit-box-align: center;
     -ms-flex-align: center;
             align-items: center;
-    margin: 20px 0 40px 0;
-    padding-bottom: 40px;
-    padding-right: 80px;
+
+
 }
 
 .tm-main-nav a:hover,
 .tm-main-nav a:focus,
 .tm-main-nav a.active {
-    background-image: url(../img/nav-item-highlight.png);
     color: #33ccff;
     text-decoration: none;    
 }
