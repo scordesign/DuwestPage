@@ -46,37 +46,43 @@ http://www.tooplate.com/view/2102-constructive
 		<div class="row tm-main-row">
 
 			<!-- Sidebar -->
-			<div id="tmSideBar" class="col-xl-3 col-lg-4 col-md-12 col-sm-12 sidebar">
-				<div id="imglogo"> 
+			<div id="tmSideBar" class="col-xl-5  sidebar">
+				<span id="imglogo"> 
 				<img src="img/Logo-R-Andina.png">	
-				</div>
+				</span>
+				<span id="imgFlag"> <img src="img/Bandera-col.png">	</span>
+				<span><i class="fa fa-search" ></i> </span>
+				<span><input type="search" name="search" id="searchMenu"></span>
 				
-				<button id="tmMainNavToggle" class="menu-icon">&#9776;</button>
-
+				<span><i class="fab fa-facebook-f" ></i></span>
+				<span><i class="fab fa-instagram"></i></span>
+				<span><i class="far fa-user"></i></span>
+				<span><i id="TmMainNav" class="fas fa-bars"></i></span>
+					
 
 				
 			</div>
-			<div class="show dropDownBar inner ">
+			<div class="show dropDownBar inner " id="dropDownBar" >
 				<nav id="tmMainNav" class="tm-main-nav">
 					<ul>
 						<li>
 							<a href="#intro" id="tmNavLink1" class="scrolly active" data-bg-img="constructive_bg_01.jpg" data-page="#tm-section-1">
-								<span><i class="fa fa-caret-right" aria-hidden="true"></i> Conócenos</span>
+								<i class="fa fa-caret-right" aria-hidden="true"></i> Conócenos
 							</a>
 						</li>
 						<li>
 							<a href="#products" id="tmNavLink2" class="scrolly" data-bg-img="constructive_bg_02.jpg" data-page="#tm-section-2" data-page-type="carousel">
-								<span><i class="fa fa-caret-right" aria-hidden="true"></i> Portafolio protección de cultivos. </span>
+								<i class="fa fa-caret-right" aria-hidden="true"></i> Portafolio protección de cultivos.
 							</a>
 						</li>							
 						<li>
 							<a href="#company" class="scrolly" data-bg-img="constructive_bg_03.jpg" data-page="#tm-section-3">
-								<span> <i class="fa fa-caret-right" aria-hidden="true"></i>Our Company</span>
+								 <i class="fa fa-caret-right" aria-hidden="true"></i>Our Company
 							</a>
 						</li>
 						<li>
 							<a href="#contact" class="scrolly" data-bg-img="constructive_bg_04.jpg" data-page="#tm-section-4">
-								<span> <i class="fa fa-caret-right" aria-hidden="true"></i>Contact Us</span>
+								 <i class="fa fa-caret-right" aria-hidden="true"></i>Contact Us
 							</a>
 						</li>
 					</ul>
@@ -259,6 +265,17 @@ http://www.tooplate.com/view/2102-constructive
 		var currentPageID = "#tm-section-1";
 
 		
+		$(function() {
+    		var posicionSideBar = $("#tmSideBar").offset();
+			var posicionTmMainNav = $("#TmMainNav").offset();
+			var posicionSearchMenu = $("#searchMenu").offset();
+			
+			$("#dropDownBar").css({
+				"top": (posicionSideBar.top + $("#tmSideBar").height()) + "px",
+				"left": (posicionSearchMenu.left) + "px",
+
+			});
+		});
 
 		// Setup Carousel
 		function setupCarousel() {
