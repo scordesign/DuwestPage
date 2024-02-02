@@ -18,8 +18,9 @@ http://www.tooplate.com/view/2102-constructive
 .dropDownBar{
     z-index: 1000;
     background: #00000052;
-    height: 30vh;
     position: absolute;
+    backdrop-filter: blur(10px);
+    border-radius: 0rem 0rem 1rem 1rem;
 }
 
 body {
@@ -137,7 +138,7 @@ p:last-child { margin-bottom: 0; }
     position: fixed;
     right: 5%;
     margin-top: 3%;
-    width: 75vw;
+    width: 37vw;
     height: 7%;
 }
 
@@ -197,10 +198,18 @@ p:last-child { margin-bottom: 0; }
     margin-right: 35px;
 }
 
-.tm-main-nav { font-size: 1.1rem; }
+.tm-main-nav { 
+    font-size: 1.05rem; 
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: url("../img/fondo-suelo-blanco.png");
+    padding-bottom: 0.2rem;
+    
+}
+
 .tm-main-nav li { list-style: none; }
 .tm-main-nav a {
-    padding: 0.5% 1%;
+    padding: .1rem .3rem;
     background-position: left bottom;
     color: white;
     display: -webkit-box;
@@ -212,8 +221,8 @@ p:last-child { margin-bottom: 0; }
 
 
 .tm-main-nav a i {
- color :green;
-
+ color :#a6ca56;
+ padding: 0rem 0.3rem;
 }
 
 .tm-main-nav a  {
@@ -224,7 +233,8 @@ p:last-child { margin-bottom: 0; }
 .tm-main-nav a:hover,
 .tm-main-nav a:focus,
 .tm-main-nav a.active {
-    color: #33ff5f;
+    color: #ffffff;
+    background: #31aa47;
     text-decoration: none;    
 }
 
@@ -269,13 +279,16 @@ p:last-child { margin-bottom: 0; }
 
 .tm-section {
     width: 100%;
-    background-color: rgba(0,0,0,0);   
+    background-color: rgba(0,0,0,0);  
 }
 
 .col-md-6.tm-contact-col { margin-bottom: 0; }
 
 .tm-img-slider { max-width: 940px; }
-#tm-section-1 { max-width: 700px; }
+#tm-section-1 { width: 100%;
+height: 100%; }
+
+
 
 .tm-icon-media {
   margin-right: 1.5rem;
@@ -434,7 +447,6 @@ footer a { color: white; }
     /* left: 4%; */
     top: 50%;
     margin-left: 0%;
-    right: ;
 }
 .box2 h3{
     text-transform: uppercase;
@@ -470,6 +482,26 @@ footer a { color: white; }
     font-weight: bold;
 }
 
+.hide{
+    display: none !important;
+    height: 0px;
+}
+
+.sec1{
+    overflow: hidden;
+    font-size: 1rem;
+    width: 35%;
+    height: 20%;
+    backdrop-filter: blur(10px);
+    background: #31aa4752;
+    border: solid #31aa47 0.1rem;
+    border-radius: 1rem;
+    left: 15vw;
+    top: 20vh;
+    position: fixed;
+    padding: 1rem 1rem;
+}
+
 @media (max-width: 1800px) {
   .tm-section { 
     margin-right: auto;
@@ -478,7 +510,6 @@ footer a { color: white; }
    /* bottom: 10%; */
     width: 100%;
     height: 100vh;
-    
  }
 }
 

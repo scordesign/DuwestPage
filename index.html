@@ -46,7 +46,7 @@ http://www.tooplate.com/view/2102-constructive
 		<div class="row tm-main-row">
 
 			<!-- Sidebar -->
-			<div id="tmSideBar" class="col-xl-5  sidebar">
+			<div id="tmSideBar" class=" sidebar">
 				<span id="imglogo"> 
 				<img src="img/Logo-R-Andina.png">	
 				</span>
@@ -62,7 +62,7 @@ http://www.tooplate.com/view/2102-constructive
 
 				
 			</div>
-			<div class="show dropDownBar inner " id="dropDownBar" >
+			<div class="show dropDownBar inner hide " id="dropDownBar" style="display: none;" >
 				<nav id="tmMainNav" class="tm-main-nav">
 					<ul>
 						<li>
@@ -77,12 +77,32 @@ http://www.tooplate.com/view/2102-constructive
 						</li>							
 						<li>
 							<a href="#company" class="scrolly" data-bg-img="constructive_bg_03.jpg" data-page="#tm-section-3">
-								 <i class="fa fa-caret-right" aria-hidden="true"></i>Our Company
+								 <i class="fa fa-caret-right" aria-hidden="true"></i>Portafolio nutrición especializada
 							</a>
 						</li>
 						<li>
 							<a href="#contact" class="scrolly" data-bg-img="constructive_bg_04.jpg" data-page="#tm-section-4">
-								 <i class="fa fa-caret-right" aria-hidden="true"></i>Contact Us
+								 <i class="fa fa-caret-right" aria-hidden="true"></i>Maquinaria y equipos
+							</a>
+						</li>
+						<li>
+							<a href="#contact" class="scrolly" data-bg-img="constructive_bg_04.jpg" data-page="#tm-section-4">
+								 <i class="fa fa-caret-right" aria-hidden="true"></i>Novedades y lanzamientos
+							</a>
+						</li>
+						<li>
+							<a href="#contact" class="scrolly" data-bg-img="constructive_bg_04.jpg" data-page="#tm-section-4">
+								 <i class="fa fa-caret-right" aria-hidden="true"></i>Asesores en tu zona
+							</a>
+						</li>
+						<li>
+							<a href="#contact" class="scrolly" data-bg-img="constructive_bg_04.jpg" data-page="#tm-section-4">
+								 <i class="fa fa-caret-right" aria-hidden="true"></i>Trabaja con nosotros
+							</a>
+						</li>
+						<li>
+							<a href="#contact" class="scrolly" data-bg-img="constructive_bg_04.jpg" data-page="#tm-section-4">
+								 <i class="fa fa-caret-right" aria-hidden="true"></i>Contáctanos
 							</a>
 						</li>
 					</ul>
@@ -93,10 +113,10 @@ http://www.tooplate.com/view/2102-constructive
 
 					<!-- section 1 -->
 					<section id="tm-section-1" class="tm-section">
-						<div class="ml-auto">
-							<p class="mb-5 tm-font-big">AGRADECEMOS EL ESFUERZO, CUIDADO Y PRESERVACION QUE TIENES CON LA TIERRA, GRACIAS A TU TRABAJO NUESTRO PAIS SE ALIMENTA.</p>
-							<header class="mb-4"><h3 class="tm-text-shadow">HOY EN DUWEST COLOMBIA TE DESEAMOS UN MUY FELIZ D´IA DEL AGRICULTOR</h3></header>
-							<a href="#" class="btn tm-btn tm-font-big" data-nav-link="#tmNavLink2">Continue...</a> 
+						<div class="sec1">
+							 CONOCE EL MEJOR PASTO DEL MUNDO TROPICAL Y NUTRE A TUS ANIMALES CON PASTO DE LA MEJOR CALIDAD.
+							 <br>
+							<strong>CON MAVUNO MÁS CARNE, MÁS LECHE, TERNEROS.</strong>
 							<!-- data-nav-link holds the ID of nav item, which means this link should behave the same as that nav item  -->
 						</div>
 					</section>
@@ -144,6 +164,7 @@ http://www.tooplate.com/view/2102-constructive
 								            		          
 						</div>       		          	
 					</section>
+
 
 					<!-- section 3 -->
 					<section id="tm-section-3" class="tm-section">						
@@ -264,17 +285,52 @@ http://www.tooplate.com/view/2102-constructive
 		var sidebarVisible = false;
 		var currentPageID = "#tm-section-1";
 
-		
 		$(function() {
-    		var posicionSideBar = $("#tmSideBar").offset();
+    		
+			$("#TmMainNav").on( "click", function() {
+				var dropDownBar = $("#dropDownBar");
+
+			if (dropDownBar.hasClass("hide")) {
+			  // Si está oculto, mostrarlo gradualmente
+			  dropDownBar.removeClass("hide").animate({
+				height: "toggle"
+			  }, 500); // Puedes ajustar la duración de la animación según tus preferencias
+
+			} else {
+			  // Si está visible, ocultarlo gradualmente
+			  dropDownBar.animate({
+				height: "toggle"
+			  }, 500, function() {
+				// Agregar la clase hide después de la animación
+				dropDownBar.addClass("hide");
+			  });
+			}
+			} );
+
+			function ajustarNav() {
+			var posicionSideBar = $("#tmSideBar").offset();
 			var posicionTmMainNav = $("#TmMainNav").offset();
-			var posicionSearchMenu = $("#searchMenu").offset();
+			var posicionImgFlag = $("#imgFlag").offset();
+			var posicionMenuBars = $("#TmMainNav").offset();
+			var posicionImglogo = $("#imglogo").offset();
 			
+
+
 			$("#dropDownBar").css({
 				"top": (posicionSideBar.top + $("#tmSideBar").height()) + "px",
-				"left": (posicionSearchMenu.left) + "px",
-
+				"left": (posicionImgFlag.left) + "px",
+				"width": (posicionMenuBars.left - posicionImgFlag.left) +"px"
 			});
+
+     		 }
+
+      // Ejecutar la función al cargar la página
+      ajustarNav();
+
+      // Agregar un evento resize que llame a la función
+      $(window).on('resize', function() {
+        ajustarNav();
+      });
 		});
 
 		// Setup Carousel
