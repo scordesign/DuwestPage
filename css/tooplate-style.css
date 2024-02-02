@@ -20,9 +20,6 @@ http://www.tooplate.com/view/2102-constructive
     background: #00000052;
     position: absolute;
     /*backdrop-filter: blur(10px);*/
-    background-attachment: fixed;
-    background-size: cover;
-    background-image: url("../img/fondo-suelo-blanco.png");
     border-radius: 0rem 0rem 1rem 1rem;
 }
 
@@ -141,7 +138,7 @@ p:last-child { margin-bottom: 0; }
     position: fixed;
     right: 5%;
     margin-top: 3%;
-    width: 75vw;
+    width: 37vw;
     height: 7%;
 }
 
@@ -203,6 +200,10 @@ p:last-child { margin-bottom: 0; }
 
 .tm-main-nav { 
     font-size: 1.05rem; 
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: url("../img/fondo-suelo-blanco.png");
+    padding-bottom: 0.2rem;
     
 }
 
@@ -476,6 +477,11 @@ footer a { color: white; }
 .box4 h3{
     text-transform: uppercase;
     font-weight: bold;
+}
+
+.hide{
+    display: none !important;
+    height: 0px;
 }
 
 @media (max-width: 1800px) {

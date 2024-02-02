@@ -46,7 +46,7 @@ http://www.tooplate.com/view/2102-constructive
 		<div class="row tm-main-row">
 
 			<!-- Sidebar -->
-			<div id="tmSideBar" class="col-xl-5  sidebar">
+			<div id="tmSideBar" class=" sidebar">
 				<span id="imglogo"> 
 				<img src="img/Logo-R-Andina.png">	
 				</span>
@@ -62,7 +62,7 @@ http://www.tooplate.com/view/2102-constructive
 
 				
 			</div>
-			<div class="show dropDownBar inner " id="dropDownBar" >
+			<div class="show dropDownBar inner hide " id="dropDownBar" style="display: none;" >
 				<nav id="tmMainNav" class="tm-main-nav">
 					<ul>
 						<li>
@@ -287,12 +287,35 @@ http://www.tooplate.com/view/2102-constructive
 
 		$(function() {
     		
+			$("#TmMainNav").on( "click", function() {
+				var dropDownBar = $("#dropDownBar");
+
+			if (dropDownBar.hasClass("hide")) {
+			  // Si está oculto, mostrarlo gradualmente
+			  dropDownBar.removeClass("hide").animate({
+				height: "toggle"
+			  }, 500); // Puedes ajustar la duración de la animación según tus preferencias
+
+			} else {
+			  // Si está visible, ocultarlo gradualmente
+			  dropDownBar.animate({
+				height: "toggle"
+			  }, 500, function() {
+				// Agregar la clase hide después de la animación
+				dropDownBar.addClass("hide");
+			  });
+			}
+			} );
+
 			function ajustarNav() {
 			var posicionSideBar = $("#tmSideBar").offset();
 			var posicionTmMainNav = $("#TmMainNav").offset();
 			var posicionImgFlag = $("#imgFlag").offset();
 			var posicionMenuBars = $("#TmMainNav").offset();
+			var posicionImglogo = $("#imglogo").offset();
 			
+
+
 			$("#dropDownBar").css({
 				"top": (posicionSideBar.top + $("#tmSideBar").height()) + "px",
 				"left": (posicionImgFlag.left) + "px",
