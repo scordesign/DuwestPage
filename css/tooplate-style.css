@@ -18,8 +18,12 @@ http://www.tooplate.com/view/2102-constructive
 .dropDownBar{
     z-index: 1000;
     background: #00000052;
-    height: 30vh;
     position: absolute;
+    /*backdrop-filter: blur(10px);*/
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: url("../img/fondo-suelo-blanco.png");
+    border-radius: 0rem 0rem 1rem 1rem;
 }
 
 body {
@@ -197,10 +201,14 @@ p:last-child { margin-bottom: 0; }
     margin-right: 35px;
 }
 
-.tm-main-nav { font-size: 1.1rem; }
+.tm-main-nav { 
+    font-size: 1.05rem; 
+    
+}
+
 .tm-main-nav li { list-style: none; }
 .tm-main-nav a {
-    padding: 0.5% 1%;
+    padding: .1rem .3rem;
     background-position: left bottom;
     color: white;
     display: -webkit-box;
@@ -212,8 +220,8 @@ p:last-child { margin-bottom: 0; }
 
 
 .tm-main-nav a i {
- color :green;
-
+ color :#a6ca56;
+ padding: 0rem 0.3rem;
 }
 
 .tm-main-nav a  {
@@ -224,7 +232,8 @@ p:last-child { margin-bottom: 0; }
 .tm-main-nav a:hover,
 .tm-main-nav a:focus,
 .tm-main-nav a.active {
-    color: #33ff5f;
+    color: #ffffff;
+    background: #31aa47;
     text-decoration: none;    
 }
 
@@ -268,8 +277,9 @@ p:last-child { margin-bottom: 0; }
 .tm-text-shadow { text-shadow: 0px 3px 2px rgba(50, 50, 50, 1); }
 
 .tm-section {
-    width: 100%;
-    background-color: rgba(0,0,0,0);   
+    max-width: 100%;
+    width: auto;
+    background-color: rgba(0,0,0,0.5);   
 }
 
 .col-md-6.tm-contact-col { margin-bottom: 0; }
@@ -373,112 +383,12 @@ address { font-size: 1rem; }
 
 footer a { color: white; }
 
-.catalogo{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.catalogo1{
-    width: 25%;
-    height: 100vh;
-    background-color: #33ccff;
-    z-index: 1;
-}
-.catalogo1 a{
-    width: 25%;
-}
-.catalogo1 img{
-    width: 100%;
-    z-index: 2;
-}
-
-
-.catalogo2{
-    width: 25%;
-    height: 100vh;
-    background-color: #e74c3c;
-}
-.catalogo3{
-    width: 25%;
-    height: 100vh;
-    background-color: #f9c922;
-}
-.catalogo4{
-    width: 25%;
-    height: 100vh;
-    background-color: #FFF;
-}
-.box1{
-    width: 17%;
-    height: auto;
-    background-color: rgba(0,0,0,0.5);
-    position: fixed;
-    z-index: 999;
-    /* left: 4%; */
-    top: 50%;
-    margin-left: 0%;
-}
-.box1 h3{
-    text-transform: uppercase;
-    font-weight: bold;
-    z-index: 2;
-}
-.box2{
-    width: 17%;
-    height: auto;
-    background-color: rgba(0,0,0,0.25);
-    position: fixed;
-    z-index: 999;
-    /* left: 4%; */
-    top: 50%;
-    margin-left: 0%;
-    right: ;
-}
-.box2 h3{
-    text-transform: uppercase;
-    font-weight: bold;
-    
-}
-.box3{
-    width: 17%;
-    height: auto;
-    background-color: rgba(0,0,0,0.25);
-    position: fixed;
-    z-index: 999;
-    /* left: 4%; */
-    top: 50%;
-    margin-left: 0%;
-}
-.box3 h3{
-    text-transform: uppercase;
-    font-weight: bold;
-}
-.box4{
-    width: 17%;
-    height: auto;
-    background-color: rgba(0,0,0,0.25);
-    position: fixed;
-    z-index: 999;
-    /* left: 4%; */
-    top: 50%;
-    margin-left: 0%;
-}
-.box4 h3{
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
 @media (max-width: 1800px) {
   .tm-section { 
     margin-right: auto;
     position: fixed;
-    left: 0%;
-   /* bottom: 10%; */
-    width: 100%;
-    height: 100vh;
-    
+    left: 50%;
+    bottom: 10%;
  }
 }
 

@@ -77,12 +77,32 @@ http://www.tooplate.com/view/2102-constructive
 						</li>							
 						<li>
 							<a href="#company" class="scrolly" data-bg-img="constructive_bg_03.jpg" data-page="#tm-section-3">
-								 <i class="fa fa-caret-right" aria-hidden="true"></i>Our Company
+								 <i class="fa fa-caret-right" aria-hidden="true"></i>Portafolio nutrición especializada
 							</a>
 						</li>
 						<li>
 							<a href="#contact" class="scrolly" data-bg-img="constructive_bg_04.jpg" data-page="#tm-section-4">
-								 <i class="fa fa-caret-right" aria-hidden="true"></i>Contact Us
+								 <i class="fa fa-caret-right" aria-hidden="true"></i>Maquinaria y equipos
+							</a>
+						</li>
+						<li>
+							<a href="#contact" class="scrolly" data-bg-img="constructive_bg_04.jpg" data-page="#tm-section-4">
+								 <i class="fa fa-caret-right" aria-hidden="true"></i>Novedades y lanzamientos
+							</a>
+						</li>
+						<li>
+							<a href="#contact" class="scrolly" data-bg-img="constructive_bg_04.jpg" data-page="#tm-section-4">
+								 <i class="fa fa-caret-right" aria-hidden="true"></i>Asesores en tu zona
+							</a>
+						</li>
+						<li>
+							<a href="#contact" class="scrolly" data-bg-img="constructive_bg_04.jpg" data-page="#tm-section-4">
+								 <i class="fa fa-caret-right" aria-hidden="true"></i>Trabaja con nosotros
+							</a>
+						</li>
+						<li>
+							<a href="#contact" class="scrolly" data-bg-img="constructive_bg_04.jpg" data-page="#tm-section-4">
+								 <i class="fa fa-caret-right" aria-hidden="true"></i>Contáctanos
 							</a>
 						</li>
 					</ul>
@@ -101,47 +121,20 @@ http://www.tooplate.com/view/2102-constructive
 						</div>
 					</section>
 
-					<!-- section 2  Catalogo --> 
+					<!-- section 2 -->
 					<section id="tm-section-2" class="tm-section tm-section-carousel">
-						<div class="catalogo">
-							<!--<header class="mb-4"><h2 class="tm-text-shadow">Our Products</h2></header>--> 		            
-								<div class="catalogo1">
-                                <a href="#"><img src="img/Imagen categoria-06.png"></a>
-								<div class="box1">
-									<h3>portafolio protección de cultivos</h3>
-								</div>
-								</div>
-								<div class="catalogo2">
-								<a href="#"><img src="img/Imagen categoria-07.png"></a>
-								<div class="box2">
-								<h3>portafolio nutrición especializada</h3>
-							</div>
-  
-								</div>
-								<div class="catalogo3">
-								<a href="#"><img src="img/Imagen categoria-08.png"></a>
-								<div class="box3">
-								<h3>maquinaria y equipos</h3>
-							</div>
-
-								</div>
-								<div class="catalogo4">
-								<a href="#"><img src="img/Imagen categoria-09.png"></a>
-								<div class="box4">
-								<h3>semillas de pastos</h3>
-							</div>
-
-								</div>
-
-								<!--<div class="tm-img-slider">
+						<div>
+							<header class="mb-4"><h2 class="tm-text-shadow">Our Products</h2></header>		            
+							<div class="tm-img-container">
+								<div class="tm-img-slider">
 									<a href="img/gallery-img-01.jpg" class="tm-slider-img"><img src="img/gallery-img-01-tn.jpg" alt="Image" class="img-fluid"></a>
 									<a href="img/gallery-img-02.jpg" class="tm-slider-img"><img src="img/gallery-img-02-tn.jpg" alt="Image" class="img-fluid"></a>
 									<a href="img/gallery-img-03.jpg" class="tm-slider-img"><img src="img/gallery-img-03-tn.jpg" alt="Image" class="img-fluid"></a>
 									<a href="img/gallery-img-04.jpg" class="tm-slider-img"><img src="img/gallery-img-04-tn.jpg" alt="Image" class="img-fluid"></a>
 									<a href="img/gallery-img-05.jpg" class="tm-slider-img"><img src="img/gallery-img-05-tn.jpg" alt="Image" class="img-fluid"></a>
 									<a href="img/gallery-img-06.jpg" class="tm-slider-img"><img src="img/gallery-img-06-tn.jpg" alt="Image" class="img-fluid"></a>
-								</div> -->
-								            		          
+								</div>
+							</div>		            		          
 						</div>       		          	
 					</section>
 
@@ -264,17 +257,29 @@ http://www.tooplate.com/view/2102-constructive
 		var sidebarVisible = false;
 		var currentPageID = "#tm-section-1";
 
-		
 		$(function() {
-    		var posicionSideBar = $("#tmSideBar").offset();
+    		
+			function ajustarNav() {
+			var posicionSideBar = $("#tmSideBar").offset();
 			var posicionTmMainNav = $("#TmMainNav").offset();
-			var posicionSearchMenu = $("#searchMenu").offset();
+			var posicionImgFlag = $("#imgFlag").offset();
+			var posicionMenuBars = $("#TmMainNav").offset();
 			
 			$("#dropDownBar").css({
 				"top": (posicionSideBar.top + $("#tmSideBar").height()) + "px",
-				"left": (posicionSearchMenu.left) + "px",
-
+				"left": (posicionImgFlag.left) + "px",
+				"width": (posicionMenuBars.left - posicionImgFlag.left) +"px"
 			});
+
+     		 }
+
+      // Ejecutar la función al cargar la página
+      ajustarNav();
+
+      // Agregar un evento resize que llame a la función
+      $(window).on('resize', function() {
+        ajustarNav();
+      });
 		});
 
 		// Setup Carousel
