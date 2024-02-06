@@ -524,6 +524,13 @@ footer a { color: white; }
     text-transform: uppercase;
     font-weight: bold;
 }
+.footer2{
+    position: absolute;
+    z-index: 9999;
+    bottom: 0%;
+    background-color: #31aa47;
+    height: 3vh;
+}
 
 .hide{
     display: none !important;
