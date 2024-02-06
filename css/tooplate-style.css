@@ -388,7 +388,7 @@ address { font-size: 1rem; }
     display: flex;
     justify-content: space-between; /* Distribuirá los elementos a lo largo del contenedor */
     align-items: center; /* Centra verticalmente los elementos en el contenedor */
-    height: 80px;
+    height: 13vh;
    
 
 }
@@ -435,6 +435,8 @@ footer a { color: white; }
     display: flex;
     justify-content: space-between;
     align-items: center;
+    top: 0%;
+    position: fixed;
 }
 .catalogo1{
     width: 25%;
@@ -526,10 +528,16 @@ footer a { color: white; }
 }
 .footer2{
     position: absolute;
-    z-index: 9999;
-    bottom: 0%;
+    z-index: 9999 !important;
+    bottom: 0px;
     background-color: #31aa47;
-    height: 3vh;
+    height: 13vh;
+    width: 100%;
+}
+.footer2 img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 .hide{
@@ -699,7 +707,7 @@ footer a { color: white; }
     margin: -75px 0 0 -75px;
     border-radius: 50%;
     border: 3px solid transparent;
-    border-top-color: #3498db;
+    border-top-color: green;
 
     -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
     animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
@@ -716,7 +724,7 @@ footer a { color: white; }
     bottom: 5px;
     border-radius: 50%;
     border: 3px solid transparent;
-    border-top-color: #e74c3c;
+    border-top-color: greenyellow;
 
     -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
     animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
@@ -731,7 +739,7 @@ footer a { color: white; }
     bottom: 15px;
     border-radius: 50%;
     border: 3px solid transparent;
-    border-top-color: #f9c922;
+    border-top-color: green;
 
     -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
       animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
