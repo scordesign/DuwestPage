@@ -2,6 +2,26 @@
 Template 2102 Constructive
 http://www.tooplate.com/view/2102-constructive
 */
+/* Importa la fuente Centuri Gothic */
+@import url('https://fonts.googleapis.com/css2?family=Century+Gothic&display=swap');
+
+/* Define estilos para los elementos que usarán la fuente Centuri Gothic */
+.centuri-gothic {
+    font-family: 'Centuri Gothic', sans-serif;
+}
+
+/* Importa la fuente Lemon Milk */
+@font-face {
+    font-family: 'Lemon Milk';
+    src: url('ruta/a/la/fuente/lemon-milk.woff2') format('woff2'),
+         url('ruta/a/la/fuente/lemon-milk.woff') format('woff');
+    /* Asegúrate de reemplazar 'ruta/a/la/fuente/lemon-milk.woff2' y 'ruta/a/la/fuente/lemon-milk.woff' con las rutas correctas a tus archivos de fuente */
+}
+
+/* Define estilos para los elementos que usarán la fuente Lemon Milk */
+.lemon-milk {
+    font-family: 'Lemon Milk', sans-serif;
+}
 
 .menu-icon {
     background: #00000000;
@@ -539,6 +559,67 @@ footer a { color: white; }
     width: 100%;
     height: 100%;
 }
+.conocenos{
+    position: fixed;
+    color: white;
+    /*background-color: rgba(0,0,0,0.25);*/
+    width:70%;
+    overflow: hidden;
+    /* display: flex;*/
+    justify-content: space-between; /* Distribuirá los elementos a lo largo del contenedor */
+    align-items: center; /* Centra verticalmente los elementos en el contenedor */
+    height: 100vh;
+    margin-left: 15%;
+ 
+}
+.title-conocenos{
+    position: relative;
+    top: 25%;
+    background-color: rgba(75,174,127,0.9);
+    color: white;
+    text-transform: uppercase;
+    height: auto;
+    font-size: large;
+    border-radius: 15px;
+    font-family: 'Centuri Gothic', sans-serif;
+    font-weight: 600;
+    font-size: 35px;
+    width: 50%;
+}
+
+
+
+.parrafo-conocenos{
+    position: relative;
+    top: 23%;
+    background-color: rgba(107,109,113,0.8);
+    color: white;
+    height: auto;
+    background-image: url(../img/fondo-suelo-blanco.png);
+    font-size: medium;
+    border-radius: 12px;
+    font-family: 'Lemon Milk', sans-serif;
+    font-size: 18px;
+ 
+}
+.parrafo-conocenos p{
+ 
+    color: white;
+    font-family: 'Lemon Milk', sans-serif;
+    font-size: 18px;
+    padding-left: 2%;
+    padding-right: 2%;
+ 
+}
+
+.img-conocenos{
+
+
+}
+.mision{
+  
+}
+
 
 .hide{
     display: none !important;
