@@ -562,19 +562,20 @@ footer a { color: white; }
 .conocenos{
     position: fixed;
     color: white;
-    /*background-color: rgba(0,0,0,0.25);*/
-    width:70%;
+    /* background-color: rgba(0,0,0,0.25); */
+    width: 70%;
     overflow: hidden;
-    /* display: flex;*/
-    justify-content: space-between; /* Distribuirá los elementos a lo largo del contenedor */
-    align-items: center; /* Centra verticalmente los elementos en el contenedor */
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
     height: 100vh;
     margin-left: 15%;
+    bottom: 0px;
  
 }
 .title-conocenos{
     position: relative;
-    top: 25%;
+    top: 15%;
     background-color: rgba(75,174,127,0.9);
     color: white;
     text-transform: uppercase;
@@ -584,37 +585,49 @@ footer a { color: white; }
     font-family: 'Centuri Gothic', sans-serif;
     font-weight: 600;
     font-size: 35px;
-    width: 50%;
+    width: 70%;
 }
 
 
 
 .parrafo-conocenos{
     position: relative;
-    top: 23%;
-    background-color: rgba(107,109,113,0.8);
+    top: 14%;
+    background-color: rgba(43, 43, 43, 0.267);
     color: white;
     height: auto;
     background-image: url(../img/fondo-suelo-blanco.png);
     font-size: medium;
     border-radius: 12px;
     font-family: 'Lemon Milk', sans-serif;
-    font-size: 18px;
+    font-size: 5px;
  
 }
 .parrafo-conocenos p{
  
     color: white;
     font-family: 'Lemon Milk', sans-serif;
-    font-size: 18px;
+    font-size: 17px;
     padding-left: 2%;
     padding-right: 2%;
- 
+    text-align: justify;
+    line-height: 1.2;
 }
 
 .img-conocenos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    height: 30vh;
+    position: relative;
+    bottom:10%;
+    background-color: #31aa47;
 
-
+    
+}
+.img-conocenos img{
+    width: 30%;
 }
 .mision{
   
