@@ -618,16 +618,18 @@ footer a { color: white; }
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 70%;
+    width: 100%;
     height: 30vh;
     position: relative;
-    bottom:10%;
-    background-color: #31aa47;
+    /* bottom: -15%; */
+    /* background-color: #31aa47; */
+    top: 20%;
 
     
 }
 .img-conocenos img{
-    width: 30%;
+    width: 40%;
+    border-radius: 10px;
 }
 .mision{
   
