@@ -51,12 +51,11 @@ http://www.tooplate.com/view/2102-constructive
 
 .sec2{
 
-    backdrop-filter: blur(10px);
-    background: #0d5603a9;
+    background: #00452b6e;
     margin-left: auto;
     margin-right: auto;
     height: 13%;
-    width: 25%;
+    width: 33.5%;
     border: solid #0d5603a9 0.1rem;
     border-radius: 1rem;
     position: relative;
@@ -626,8 +625,36 @@ footer a { color: white; }
     height: 0px;
 }
 
+.bgWorkUs{
+    width: 33.33333333333333%;
+    height: 100%;
+    position: relative;
+    float: left;
+    
+    background-position: center !important;
+    background-repeat: no-repeat!important;
+    background-size: cover!important;
+}
 
+.bg-a{
+background: url(../img/trabaja\ con\ nostros\ 1.png);
+}
+.bg-b{
+    background: url(../img/Trabaja\ con\ nosotros\ 2.png);
+}
+.bg-c{
+    background: url(../img/Trabaja\ con\ nosotros\ 3.png);
+}
 
+.workUs{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: 30%;
+    background: rgba(82, 82, 82, 0.596);
+}
 @media (max-width: 1800px) {
   .tm-section { 
     margin-right: auto;
