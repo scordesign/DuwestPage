@@ -693,14 +693,65 @@ background: url(../img/trabaja\ con\ nostros\ 1.png);
 }
 
 .workUs{
-    position: relative;
+    position: fixed;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-    height: 30%;
-    background: rgba(82, 82, 82, 0.596);
+    bottom: 8%;
+    left: 16%;
+    width: 68%;
+    height: 38%;
+    /* background: rgba(82, 82, 82, 0.596); */
 }
+
+.workUsdv-2{
+    height: 20%;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+.workUsdv-2 img{
+    float: right;
+    height: 100%;
+}
+
+.workUsdv-2 div h3{
+    padding:1.3% ;
+    margin: 0px;
+}
+
+.workUsdv-2 div{
+    float: right;
+    width: 53%;
+    height: 80%;
+    margin-top: 0.5%;
+    border-radius: 1em;
+    backdrop-filter: blur(4px);
+    background: rgba(82, 82, 82, 0.596); 
+}
+
+
+.workUsdv-1{
+    height: 80%;
+    position: relative;
+    text-align: center;
+    background: rgba(82, 82, 82, 0.596); 
+    padding: 0.2%;
+    border-radius: 1em;
+    background-image: url(../img/fondo-suelo-blanco-vertically.png);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: auto;
+    backdrop-filter: blur(4px);
+
+}
+
+.workUsdv-1 img{
+    height: 25%;
+}
+
+.workUsdv-1 h4{
+    margin-bottom: 0px;
+}
+
 @media (max-width: 1800px) {
   .tm-section { 
     margin-right: auto;
