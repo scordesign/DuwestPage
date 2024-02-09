@@ -562,16 +562,17 @@ footer a { color: white; }
     position: fixed;
     color: white;
     /* background-color: rgba(0,0,0,0.25); */
-    width: 70%;
+    width: 80%;
     overflow: hidden;
     /* display: flex; */
     justify-content: space-between;
     align-items: center;
     height: 100vh;
-    margin-left: 15%;
+    margin-left: 10%;
     bottom: 0px;
- 
 }
+ 
+
 .title-conocenos{
     position: relative;
     top: 15%;
@@ -627,11 +628,41 @@ footer a { color: white; }
     
 }
 .img-conocenos img{
-    width: 40%;
+    width: 35%;
     border-radius: 10px;
 }
+.img-conocenos a{
+    background-color: rgba(75,174,127,0.5);
+    color: white;
+    text-transform: uppercase;
+    height: auto;
+    font-size: large;
+    border-radius: 12px;
+    font-family: 'Centuri Gothic', sans-serif;
+    font-weight: 600;
+    font-size: 35px;
+    width: 24%;
+    text-align: center;
+
+}
 .mision{
-  
+    position: absolute;
+    bottom: 15%;
+    background-color: rgba(43, 43, 43, 0.267);
+    color: white;
+    height: auto;
+    background-image: url(../img/fondo-suelo-blanco.png);
+    font-size: medium;
+    border-radius: 12px;
+    font-family: 'Lemon Milk', sans-serif;
+    font-size: 25px;
+    right: 12%;
+    width: 12%;
+    text-align: center;
+    border-radius: 13px;
+    border-color: white;
+    border: groove;
+
 }
 
 
