@@ -647,14 +647,39 @@ background: url(../img/trabaja\ con\ nostros\ 1.png);
 }
 
 .workUs{
-    position: relative;
+    position: fixed;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-    height: 30%;
-    background: rgba(82, 82, 82, 0.596);
+    bottom: 8%;
+    left: 16%;
+    width: 68%;
+    height: 40%;
+    /* background: rgba(82, 82, 82, 0.596); */
 }
+
+.workUsdv-2{
+    height: 20%;
+    position: relative;
+    text-align: center;
+
+}
+
+.workUsdv-1{
+    height: 80%;
+    position: relative;
+    text-align: center;
+    background: rgba(82, 82, 82, 0.596); 
+    padding: 0.2%;
+    border-radius: 1em;
+}
+
+.workUsdv-1 img{
+    height: 25%;
+}
+
+.workUsdv-1 h4{
+    margin-bottom: 0px;
+}
+
 @media (max-width: 1800px) {
   .tm-section { 
     margin-right: auto;
