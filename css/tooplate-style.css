@@ -5,22 +5,33 @@ http://www.tooplate.com/view/2102-constructive
 /* Importa la fuente Centuri Gothic */
 @import url('https://fonts.googleapis.com/css2?family=Century+Gothic&display=swap');
 
+
+
 /* Define estilos para los elementos que usarán la fuente Centuri Gothic */
 .centuri-gothic {
     font-family: 'Centuri Gothic', sans-serif;
 }
 
+
+
 /* Importa la fuente Lemon Milk */
-@font-face {
+
+@import url('https://fonts.googleapis.com/css2?family=Lemon+Milk&display=swap');
+
+/* @font-face {
     font-family: 'Lemon Milk';
     src: url('ruta/a/la/fuente/lemon-milk.woff2') format('woff2'),
-         url('ruta/a/la/fuente/lemon-milk.woff') format('woff');
+         url('ruta/a/la/fuente/lemon-milk.woff') format('woff'); */
     /* Asegúrate de reemplazar 'ruta/a/la/fuente/lemon-milk.woff2' y 'ruta/a/la/fuente/lemon-milk.woff' con las rutas correctas a tus archivos de fuente */
-}
+/* } */
 
 /* Define estilos para los elementos que usarán la fuente Lemon Milk */
 .lemon-milk {
     font-family: 'Lemon Milk', sans-serif;
+}
+
+.bold{
+    font-weight: bold;
 }
 
 .menu-icon {
@@ -35,45 +46,44 @@ http://www.tooplate.com/view/2102-constructive
     z-index: 1001;
 }
 .sec1{
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(calc((0.1vw + 0.1vh) ));
     overflow: hidden;
-    font-size: .9em;
+    font-size: calc((1vw + 1vh) + 1em);
     width: 30%;
     height: 25%;
-    background: #31aa4752;
-    border: solid #31aa47 0.1rem;
-    border-radius: 1rem;
+    background: #07670B3D;
+    border: solid #5BAB31 calc(0.03vw + 0.03vh);
+    border-radius: calc(1vw + 1vh);
     left: 10vw;
     top: 25vh;
     position: fixed;
-    padding: 1em 1em;
+    padding: 1% 1%;
 }
 
 .sec2{
 
     background: #00452b6e;
-    margin-left: auto;
-    margin-right: auto;
-    height: 13%;
-    width: 33.5%;
+    left: 33.333%;
+    width: 33.333%;
     border: solid #0d5603a9 0.1rem;
     border-radius: 1rem;
-    position: relative;
-    top: 112%;
+    position: fixed;
+    bottom: 18%;
+    padding: 0.5%;
 }
 
-.maLogo{
-    margin: 4% 2.5%;
-    width: 40%;
+.duLogo{
+
+    max-width: 35%;
+    max-height: 100%;
     float: left;
     filter: brightness(0) invert(1);
 }
 
-.duLogo{
-    margin: 4% 2.5%;    
-    width: 40%;
+.maLogo{
+    max-width: 55%;
+    max-height: 100%;
     float: right;
-    filter: brightness(0) invert(1);
 }
 
 .dropDownBar{
@@ -118,7 +128,7 @@ h1,h2,h3 { font-weight: 300; }
 
 p {
     font-size: 1rem;
-    line-height: 2.2;
+    /* line-height: 2.2; */
 }
 
 p:last-child { margin-bottom: 0; }
@@ -176,7 +186,7 @@ p:last-child { margin-bottom: 0; }
 /*#tmMainNavToggle { display: none; }*/
 
 #tmSideBar span{
-    margin: 2% 1%;
+    margin: 2% 1.2%;
 }
 
 .sidebar { 
@@ -193,14 +203,14 @@ p:last-child { margin-bottom: 0; }
             justify-content: center;
     cursor: default;
     z-index: 100;
-    background: rgba(43, 43, 43, 0.6);
+    background: rgba(74, 71, 69, 0.4);
     color: white;
     z-index: 1000;
     position: fixed;
     right: 5%;
     margin-top: 3%;
-    width: 37vw;
-    height: 7%;
+    width: 40vw;
+    height: 8%;
 }
 
 #imglogo{
@@ -270,8 +280,8 @@ p:last-child { margin-bottom: 0; }
 
 .tm-main-nav li { list-style: none; }
 .tm-main-nav a {
-    font-size: .8em; 
-    padding: .1rem .3rem;
+    font-size: calc((0.1vw + 0.1vh) + 0.8rem); 
+    padding: .1vh .3vw;
     background-position: left bottom;
     color: white;
     display: -webkit-box;

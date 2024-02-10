@@ -66,25 +66,25 @@ http://www.tooplate.com/view/2102-constructive
 
 
 		</div>
-		<div class="show dropDownBar inner hide " id="dropDownBar" style="display: none;">
+		<div class="show dropDownBar inner hide centuri-gothic" id="dropDownBar" style="display: none;">
 			<nav id="tmMainNav" class="tm-main-nav">
 				<ul>
 					<li>
 						<a href="#intro" id="tmNavLink1" class="scrolly active" data-bg-img="Fondo-8.png"
 							data-page="#tm-section-1">
-							<i class="fa fa-caret-right" aria-hidden="true"></i> Home
+							<i class="fa fa-caret-right" aria-hidden="true"></i>Home
 						</a>
 					</li>
 					<li>
 						<a href="#knowus" id="tmNavLink3" class="scrolly active" data-bg-img="Fondo-3.png"
 							data-page="#tm-section-3">
-							<i class="fa fa-caret-right" aria-hidden="true"></i> Conócenos
+							<i class="fa fa-caret-right" aria-hidden="true"></i>Conócenos
 						</a>
 					</li>
 					<li>
 						<a href="#products" id="tmNavLink2" class="scrolly" data-bg-img="constructive_bg_02.jpg"
 							data-page="#tm-section-2" data-page-type="carousel">
-							<i class="fa fa-caret-right" aria-hidden="true"></i> Portafolio protección de cultivos.
+							<i class="fa fa-caret-right" aria-hidden="true"></i>Portafolio protección de cultivos.
 						</a>
 					</li>
 					<li>
@@ -131,15 +131,14 @@ http://www.tooplate.com/view/2102-constructive
 
 			<!-- section 1 -->
 			<section id="tm-section-1" class="tm-section">
-				<div class="sec1">
-					CONOCE EL MEJOR PASTO DEL MUNDO TROPICAL Y NUTRE A TUS ANIMALES CON PASTO DE LA MEJOR CALIDAD.
-					<br>
-					<strong>CON MAVUNO MÁS CARNE, MÁS LECHE, MAS TERNEROS.</strong>
+				<div class="sec1 lemon-milk">
+					<p>CONOCE EL MEJOR PASTO DEL MUNDO TROPICAL Y NUTRE A TUS ANIMALES CON PASTO DE LA MEJOR CALIDAD.</p>
+					<p class="bold">CON MAVUNO MÁS CARNE, MÁS LECHE, MAS TERNEROS.</p>
 				</div>
-				<!-- <div class="sec2" >
+				<div class="sec2" >
 							<img src="img/Logo-R-Andina---Fondo-oscuro.png" class="duLogo" alt="">
-							<img src="img/Logo-R-Andina.png" class="maLogo" alt="">
-					   </div>-->
+							<img src="img/MAVUNO-LOGO-HOR-BLC.png" class="maLogo" alt="">
+					   </div>
 			</section>
 
 			<!-- section 2  Catalogo -->
@@ -238,7 +237,7 @@ que día a día entregan sus esfuerzos para brindar alimento y sustento a toda n
 
 				<!-- section 4 -->
 				<section id="tm-section-10" class="tm-section">	
-				<nav id="tmMainNav" class="tm-main-nav">
+				<nav id="tmMainNav" class="tm-main-nav">   
 
 					<div class="vision-general">
 						
@@ -445,6 +444,20 @@ que día a día entregan sus esfuerzos para brindar alimento y sustento a toda n
 
 		$(function () {
 
+			$("body").on("click", function (event) {
+				var dropDownBar = $("#dropDownBar");
+
+				if (!(dropDownBar.hasClass("hide")) && !($(event.target).closest('#TmMainNav').length) ) {
+					// Si está visible, ocultarlo gradualmente
+					dropDownBar.animate({
+						height: "toggle"
+					}, 500, function () {
+						// Agregar la clase hide después de la animación
+						dropDownBar.addClass("hide");
+					});
+				}
+			});
+
 			$("#TmMainNav").on("click", function () {
 				var dropDownBar = $("#dropDownBar");
 
@@ -464,6 +477,8 @@ que día a día entregan sus esfuerzos para brindar alimento y sustento a toda n
 					});
 				}
 			});
+
+			
 
 			function ajustarNav() {
 				var posicionSideBar = $("#tmSideBar").offset();
