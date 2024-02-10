@@ -26,6 +26,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // Ocultar las demás secciones si es necesario
         $(".tm-section").not("#tm-section-10").hide();
         // Desplazar la página hacia la #tm-section-10
+        currentPageID = "#tm-section-10";
+        console.log(currentPageID);
         $("html, body").animate({
             scrollTop: $("#tm-section-10").offset().top
         }, 1000);

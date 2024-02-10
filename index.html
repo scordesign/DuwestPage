@@ -239,7 +239,7 @@ que día a día entregan sus esfuerzos para brindar alimento y sustento a toda n
 
 				<!-- section 4 -->
 				<section id="tm-section-10" class="tm-section">	
-				<nav id="tmMainNav" class="tm-main-nav">   
+				<nav id="tmMainNav" class="tm-main-nav">
 
 					<div class="vision-general">
 						
@@ -407,17 +407,17 @@ que día a día entregan sus esfuerzos para brindar alimento y sustento a toda n
 		</div> 
 		<!-- .tm-content -->
 		<section id="tm-section-11" class="tm-section">
-			<div class="bgWorkUs bg-a"></div>
-			<div class="bgWorkUs bg-b"></div>
-			<div class="bgWorkUs bg-c"></div>
+			<div id="map"></div>
+    <script src="leaflet.js"></script>
+    <script>
+        // Tu código JavaScript
+		var map = L.map('map').setView([4.570868, -74.297333], 6);
 
-			<div class="workUs">
-				<p><h3><strong> ¿Quieres ser parte de nuestro equipo de trabajo Duwest Colombia? </strong></h3></p>
-				<p> Envíanos tu hoja de vida, con el puesto de trabajo que te interesa en (Asunto) y nuestro
-					departamento de Recursos Humanos estará evaluando tu solicitud. Gracias. </p>
-					<p><h3><strong> selecciondwcol@gmail.com </strong></h3></p>
-					
-			</div>
+// Añadir el mapa base
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+    </script>
 		</section>
 		<!-- .tm-content -->
 
@@ -460,7 +460,7 @@ que día a día entregan sus esfuerzos para brindar alimento y sustento a toda n
 		var currentPageID = "#tm-section-1";
 
 		$(function () {
-
+			
 			$("body").on("click", function (event) {
 				var dropDownBar = $("#dropDownBar");
 
@@ -494,8 +494,6 @@ que día a día entregan sus esfuerzos para brindar alimento y sustento a toda n
 					});
 				}
 			});
-
-			
 
 			function ajustarNav() {
 				var posicionSideBar = $("#tmSideBar").offset();
@@ -612,7 +610,7 @@ que día a día entregan sus esfuerzos para brindar alimento y sustento a toda n
 			}
 			
 			
-
+			console.log(currentPageID);
 			// Show current page
 			currentPageID = currentNavItem.data("page");
 			$(currentPageID).fadeIn(1000);
