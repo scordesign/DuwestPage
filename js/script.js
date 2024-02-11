@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         $(".tm-section").not("#tm-section-10").hide();
         // Desplazar la página hacia la #tm-section-10
         currentPageID = "#tm-section-10";
-        console.log(currentPageID);
+        console.log(currentPageID+'<<<<<<<<<<<<<<<<');
         $("html, body").animate({
             scrollTop: $("#tm-section-10").offset().top
         }, 1000);

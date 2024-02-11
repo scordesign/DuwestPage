@@ -109,7 +109,7 @@ http://www.tooplate.com/view/2102-constructive
 					</li>
 					<li>
 						<a href="#contact" class="scrolly" data-bg-img="constructive_bg_04.jpg"
-							data-page="#tm-section-7">
+							data-page="#tm-section-11">
 							<i class="fa fa-caret-right" aria-hidden="true"></i>Asesores en tu zona
 						</a>
 					</li>
@@ -324,9 +324,7 @@ que día a día entregan sus esfuerzos para brindar alimento y sustento a toda n
 
 
 			</div>
-			<div class="footer2">
-				<img src="img/gif proveedores v7.gif">
-			</div>
+			
 				</nav>
 				<div class="footer2">
 					<img src="img/gif proveedores v7.gif">
@@ -358,6 +356,23 @@ que día a día entregan sus esfuerzos para brindar alimento y sustento a toda n
 						
 				</div>
 			</section>
+
+				<!-- section 11 -  -->
+				<section id="tm-section-11" class="tm-section">
+					<div id="map"></div>
+    <script src="leaflet.js"></script>
+    <script>
+        // Tu código JavaScript
+		var map = L.map('map').setView([4.570868, -74.297333], 6);
+
+// Añadir el mapa base
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+    </script>
+				</section>
+	
 
 			<!-- section 4 -->
 			<section id="tm-section-4" class="tm-section">
@@ -610,7 +625,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 			}
 			
 			
-			console.log(currentPageID);
+			console.log(currentPageID+'>>>>>>>>>>>>>>');
 			// Show current page
 			currentPageID = currentNavItem.data("page");
 			$(currentPageID).fadeIn(1000);
