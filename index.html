@@ -371,17 +371,24 @@ que día a día entregan sus esfuerzos para brindar alimento y sustento a toda n
 				<!-- section 11 -  -->
 				<section id="tm-section-11" class="tm-section">
 					<div id="map"></div>
-    <script src="leaflet.js"></script>
-    <script>
-        // Tu código JavaScript
-		var map = L.map('map').setView([4.570868, -74.297333], 6);
-
-// Añadir el mapa base
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
-
-    </script>
+					<script src="js/leaflet/leaflet.js"></script>
+					<script>
+						// Crear un mapa y centrarlo en Colombia
+						var map = L.map('map').setView([4.570868, -74.297333], 6);
+				
+						// Añadir el mapa base
+						L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+							attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+						}).addTo(map);
+				
+						// Cargar el archivo GeoJSON con las regiones de Colombia
+						var data = L.geoJSON(colombiaGeoJSON, {
+							style: {
+								fillColor: "green",
+								weight: 2
+							}
+						}).addTo(map);
+					</script>
 				</section>
 	
 
