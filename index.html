@@ -23,6 +23,8 @@ http://www.tooplate.com/view/2102-constructive
 	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
 	<link rel="stylesheet" href="css/tooplate-style.css">
 	<link rel="stylesheet" href="js/leaflet/leaflet.css">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
 
 	<script>
@@ -108,7 +110,7 @@ http://www.tooplate.com/view/2102-constructive
 						</a>
 					</li>
 					<li>
-						<a href="#contact" class="scrolly" data-bg-img="constructive_bg_04.jpg"
+						<a href="#contact" class="scrolly" data-bg-img="Fondo-2.png"
 							data-page="#tm-section-11">
 							<i class="fa fa-caret-right" aria-hidden="true"></i>Asesores en tu zona
 						</a>
@@ -368,23 +370,53 @@ que día a día entregan sus esfuerzos para brindar alimento y sustento a toda n
 				
 			</section>
 
-				<!-- section 11 -  -->
-				<section id="tm-section-11" class="tm-section">
-					<div id="map">
-					<script src="js/leaflet/leaflet.js"></script>
-					<link rel="stylesheet" type="text/css" href="./inspector.css">
-<script type="module">
+			<!-- section 11 -  -->
+<section id="tm-section-11" class="tm-section">
+	<div id="map-container">
+		<div id="map"></div>
+	  </div>
+	  
+  </section>
+  
+  
+  <script>
+var map = L.map('map-container').setView([4.5709, -74.2973], 6); // Coordenadas de Colombia y nivel de zoom inicial
 
-import define from "./index.js";
-import {Runtime, Library, Inspector} from "./runtime.js";
+// Añadir capa de OpenStreetMap al mapa con estilos personalizados
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+  maxZoom: 18,
+}).addTo(map);
 
-const runtime = new Runtime();
-const main = runtime.module(define, Inspector.into(document.body));
+// Añadir controles de navegación al mapa
+L.control.zoom({position: 'bottomright'}).addTo(map);
 
-</script>
-</div>
+// Definir los límites de las regiones
+var cundinamarcaBounds = [[3.3253, -75.6707], [5.4564, -73.2027]]; // Coordenadas para delimitar Cundinamarca
+var antioquiaBounds = [[5.052, -76.7984], [8.8606, -75.0587]]; // Coordenadas para delimitar Antioquia
 
-				</section>
+// Añadir capa de Cundinamarca con estilos personalizados
+var cundinamarcaLayer = L.rectangle(cundinamarcaBounds, {
+  color: "#00FF00", // Color del borde
+  weight: 2, // Ancho del borde
+  fillColor: "#00FF00", // Color del relleno
+  fillOpacity: 0.3 // Opacidad del relleno
+}).addTo(map);
+cundinamarcaLayer.bindTooltip("Cundinamarca"); // Mensaje al pasar el mouse
+
+// Añadir capa de Antioquia con estilos personalizados
+var antioquiaLayer = L.rectangle(antioquiaBounds, {
+  color: "#00FF00", // Color del borde
+  weight: 2, // Ancho del borde
+  fillColor: "#00FF00", // Color del relleno
+  fillOpacity: 0.3 // Opacidad del relleno
+}).addTo(map);
+antioquiaLayer.bindTooltip("Antioquia"); // Mensaje al pasar el mouse
+
+// Ajustar el tamaño del mapa
+map.invalidateSize();
+  </script>
+  
 	
 
 			<!-- section 4 -->
@@ -617,6 +649,7 @@ const main = runtime.module(define, Inspector.into(document.body));
 				case '#tm-section-2':
 				case '#tm-section-10':
 				case '#tm-section-3':
+				case '#tm-section-11':
 				case '#popup-container':
 					$("footer").hide();
 					// Expected output: "Mangoes and papayas are $2.79 a pound."

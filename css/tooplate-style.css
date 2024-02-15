@@ -944,6 +944,16 @@ footer a { color: white; }
   fill: #fff;
   stroke: #aaa;
 }
+#map-container {
+    width: 50%; /* Ajusta el ancho del contenedor al 50% del contenedor principal */
+    margin: 0 auto;
+    height: 50%; /* Ajusta la altura del contenedor al 50% del contenedor principal */
+  }
+  
+  #map {
+    width: 100%; /* Ajusta el ancho del mapa al 100% del contenedor */
+    height: 100%; /* Ajusta la altura del mapa al 100% del contenedor */
+  }
 
 .effect-layer{
   pointer-events:none;
