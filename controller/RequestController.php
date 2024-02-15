@@ -2,8 +2,10 @@
 
 switch ($_SERVER["REQUEST_METHOD"]  ) {
     case "post":
-        switch ($_POST["accion"]) {
+        echo"llego0";
+        switch ($_POST["action"]) {
             case "RegiterUser":
+                echo"llego1";
                 $users = new users();
                 $registerUser = $users ->RegisterUser();
             return $registerUser;
