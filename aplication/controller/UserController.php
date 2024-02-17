@@ -7,7 +7,7 @@ class users
     {
     }
 
-    
+
 
     public function RegisterUser()
     {
@@ -17,8 +17,7 @@ class users
             $pdo = $conexion->obtenerConexion();
 
             // Preparar la sentencia SQL de inserción
-            $sentencia = $pdo->prepare("INSERT INTO users (mail, user,name,password,key)" .
-                "VALUES (:mail, :user , :name , :password , :sal )");
+            $stmt = $pdo->prepare("INSERT INTO users (`mail`, `user`,`name`,`password`,`key`) VALUES (:mail , :user , :name , :password , :sal )");
 
             $mail = $_POST["mail"];
             $user = $_POST["user"];
@@ -29,14 +28,17 @@ class users
 
             $passwordEncrypt = hash('sha256', $sal . $password);
 
-
+            $stmt->bindParam(':mail', $mail);
+            $stmt->bindParam(':user', $user);
+            $stmt->bindParam(':name', $name);
+            $stmt->bindParam(':password', $passwordEncrypt);
+            $stmt->bindParam(':sal', $sal);
             // Ejecutar la sentencia SQL con los valores correspondientes
-            $sentencia->execute(array(':mail' => $mail, ':user' => $user, ':name' => $name, ':password' => $passwordEncrypt, ':sal' => $sal));
+            $stmt->execute();
 
-
-            return "Registro exitoso.";
+            echo 200;
         } catch (PDOException $e) {
-            return "Error de conexión: " . $e->getMessage();
+            echo 500 . $e->getMessage();
         }
 
         // $statement = $pdo->prepare("SELECT * FROM products");

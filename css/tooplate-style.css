@@ -953,6 +953,15 @@ footer a { color: white; }
     background-color: #0056b3;
 }
 
+.custom-alert {
+    position: fixed;
+    top: 2%; /* Posición vertical */
+    left: 2%; /* Posición horizontal */
+    float: left;
+    z-index: 99999; /* Asegúrate de que la alerta esté por encima de otros elementos */
+    display: none; /* Oculta la alerta por defecto */
+}
+
 /*.img-conocenos{
     display: flex;
     justify-content: space-between;

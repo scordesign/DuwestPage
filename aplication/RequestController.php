@@ -1,14 +1,18 @@
 <?php
+require_once ('controller/ProductsController.php');
+require_once ('controller/UserController.php');
+require_once ('connection/Connection.php');
 
-switch ($_SERVER["REQUEST_METHOD"]  ) {
+
+switch (strtolower($_SERVER["REQUEST_METHOD"])) {
     case "post":
-        echo"llego0";
+        
         switch ($_POST["action"]) {
             case "RegiterUser":
-                echo"llego1";
+                
                 $users = new users();
                 $registerUser = $users ->RegisterUser();
-            return $registerUser;
+            echo $registerUser;
         }
         break;
     case "get":
