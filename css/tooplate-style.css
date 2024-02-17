@@ -5,7 +5,9 @@ http://www.tooplate.com/view/2102-constructive
 /* Importa la fuente Centuri Gothic */
 @import url('https://fonts.googleapis.com/css2?family=Century+Gothic&display=swap');
 
-
+#inlineFrameExample{
+    border: 0px;
+}
 
 /* Define estilos para los elementos que usarán la fuente Centuri Gothic */
 .centuri-gothic {
