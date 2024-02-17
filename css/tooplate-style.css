@@ -945,9 +945,17 @@ footer a { color: white; }
   stroke: #aaa;
 }
 #map-container {
-    width: 50%; /* Ajusta el ancho del contenedor al 50% del contenedor principal */
+    width: 51%;
     margin: 0 auto;
-    height: 50%; /* Ajusta la altura del contenedor al 50% del contenedor principal */
+    height: 100%;
+    position: fixed;
+    left: 0%;
+  
+  }
+
+  #inlineFrameExample{
+    width: 100%;
+    height: 100%; 
   }
   
   #map {

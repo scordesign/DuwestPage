@@ -15,7 +15,7 @@ function _map(d3,colombiaGeoJSON)
   var color = d3.scaleLinear()
   .domain([1, 20])
   .clamp(true)
-  .range(['#fff', '#fff']);
+  .range(['#fff', '#409A99']);
 
   var projection = d3.geoMercator()
   .scale(1500)
@@ -267,7 +267,7 @@ html`<style>
 @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Josefin+Slab|Arvo|Lato|Vollkorn|Abril+Fatface|Old+Standard+TT|Droid+Sans|Lobster|Inconsolata|Montserrat|Playfair+Display|Karla|Alegreya|Libre+Baskerville|Merriweather|Lora|Archivo+Narrow|Neuton|Signika|Questrial|Fjalla+One|Bitter|Varela+Round);
 
 .background {
-  fill: #eee;
+  fill: transparent;
   pointer-events: all;
 }
 
