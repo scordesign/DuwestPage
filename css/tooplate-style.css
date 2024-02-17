@@ -883,6 +883,76 @@ footer a { color: white; }
     bottom: -20%;
 }
 
+#modal{
+    border-radius: 2%;
+    position: relative;
+    width: 50%;
+    height: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    background-color: rgba(255, 255, 255, 0.719);
+}
+
+#modalBackground{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.247);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    height: 100%;
+    z-index: 9999999;
+
+}
+
+#closeModal{
+    float: right;
+    max-height: 6%;
+    padding: 1%;
+    color: black;
+    cursor: pointer;
+}
+
+#miFormulario {
+    width: 80%;
+    margin: 5% auto;
+    background-color: #ffffff00;
+    padding: 1%;
+    border-radius: 1%;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    text-align: center;
+}
+#miFormulario label,
+#miFormulario input[type="text"],
+#miFormulario input[type="email"],
+#miFormulario button {
+    display: block;
+    margin-bottom: 2%;
+    color: black;
+    font-family: 'Centuri Gothic', sans-serif;
+}
+
+#miFormulario input{
+    width: calc(100% - 20px);
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+#miFormulario button {
+    font-family: 'Centuri Gothic', sans-serif;
+    background-color: rgba(0, 139, 58, 0.788);
+    color: #ffffff;
+    border: none;
+    border-radius: 5%;
+    margin: 2% auto; 
+    cursor: pointer;
+    display: block;
+
+}
+#miFormulario button:hover {
+    background-color: #0056b3;
+}
+
 /*.img-conocenos{
     display: flex;
     justify-content: space-between;

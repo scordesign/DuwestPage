@@ -48,8 +48,11 @@ http://www.tooplate.com/view/2102-constructive
 		<div class="loader-section section-right"></div>
 	</div>
 
-	<div class="modalBackground" id="modalBackground" > 
-		<div class="modal" id="modal"></div>
+	<div class="modalBackground hide" id="modalBackground" > 
+		<div class="modal" id="modal">
+			<span id="closeModal"><i  class="fas fa-window-close"></i></span>
+			<div id="formModal"></div>
+		</div>
 	</div>
 
 </div>
@@ -69,7 +72,7 @@ http://www.tooplate.com/view/2102-constructive
 
 			<span><i class="fab fa-facebook-f"></i></span>
 			<span><i class="fab fa-instagram"></i></span>
-			<span><i class="far fa-user"></i></span>
+			<span id="user-add" ><i class="far fa-user"></i></span>
 			<span><i id="TmMainNav" class="fas fa-bars"></i></span>
 
 
@@ -507,6 +510,7 @@ map.invalidateSize();
 	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
 	<script type="text/javascript" src="js/jquery.backstretch.min.js"></script>
 	<script type="text/javascript" src="slick/slick.min.js"></script> <!-- Slick Carousel -->
+	<script src="js/RequestScript.js"></script><!-- forms and request -->
 	<script src="js/script.js"></script>
 	
 	<script>
