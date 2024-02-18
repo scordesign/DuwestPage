@@ -51,7 +51,7 @@ http://www.tooplate.com/view/2102-constructive
     backdrop-filter: blur(calc((0.1vw + 0.1vh) ));
     overflow: hidden;
     font-size: calc((1vw + 1vh) + 1em);
-    width: 30%;
+    width: 37%;
     height: 25%;
     background: #07670B3D;
     border: solid #5BAB31 calc(0.03vw + 0.03vh);
@@ -60,6 +60,7 @@ http://www.tooplate.com/view/2102-constructive
     top: 25vh;
     position: fixed;
     padding: 1% 1%;
+    text-align: justify;
 }
 
 .sec2{
@@ -129,11 +130,16 @@ a:hover { color: #FF0; }
 h1,h2,h3 { font-weight: 300; }
 
 p {
-    font-size: 1rem;
-    /* line-height: 2.2; */
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
 }
 
-p:last-child { margin-bottom: 0; }
+p:last-child { 
+     
+    margin-bottom: 0;
+    font-size: 30px;
+}
 
 .tm-bg-transparent-black {
     background-color: rgba(0,0,0,0.25);    
@@ -606,14 +612,18 @@ footer a { color: white; }
 .parrafo-conocenos{
     position: relative;
     top: 14%;
-    background-color: rgba(43, 43, 43, 0.6);
+    background-color: rgba(73, 71, 69, 0.6);
     color: white;
     height: auto;
     background-image: url(../img/fondo-suelo-blanco.png);
     font-size: medium;
     border-radius: 12px;
     font-family: 'Lemon Milk', sans-serif;
-    font-size: 5px;
+    font-size: 22px;
+    padding-bottom: 2%;
+    font-weight: 400;
+    text-align: justify;
+    line-height: 27px;
  
 }
 .parrafo-conocenos p{
@@ -645,7 +655,7 @@ footer a { color: white; }
     border-radius: 10px;
 }
 .img-conocenos a{
-    background-color: rgba(0,139,58,0.5);
+    background-color: rgba(0,139,58,0.6);
     color: white;
     text-transform: uppercase;
     height: auto;
@@ -661,7 +671,7 @@ footer a { color: white; }
 .mision{
     position: absolute;
     bottom: 15%;
-    background-color: rgba(43, 43, 43, 0.6);
+    background-color: rgba(73, 71, 69, 0.6);
     color: white;
     height: auto;
     background-image: url(../img/fondo-suelo-blanco.png);
@@ -711,7 +721,7 @@ footer a { color: white; }
 .mision1{
     position: relative;
     top: 20%;
-    background-color: rgba(0,139,58,0.6);
+    background-color: rgba(0,139,58,0.52);
     color: white;
     text-transform: uppercase;
     height: auto;
@@ -744,7 +754,7 @@ footer a { color: white; }
 .parrafo-vision{
     position: relative;
     top: 22%;
-    background-color: rgba(43, 43, 43, 0.6);
+    background-color: rgba(73, 71, 69, 0.6);
     color: white;
     height: auto;
     background-image: url(../img/fondo-suelo-blanco.png);
@@ -770,7 +780,7 @@ footer a { color: white; }
 .parrafo-mision{
     position: relative;
     top: 21%;
-    background-color: rgba(43, 43, 43, 0.6);
+    background-color: rgba(73, 71, 69, 0.6);
     color: white;
     height: auto;
     background-image: url(../img/fondo-suelo-blanco.png);
@@ -982,7 +992,7 @@ footer a { color: white; }
     border-radius: 10px;
 }
 .img-conocenos a{
-    background-color: rgba(0,139,58,0.5);
+    background-color: rgba(0,139,58,0.6);
     color: white;
     text-transform: uppercase;
     height: auto;
@@ -998,7 +1008,7 @@ footer a { color: white; }
 .mision{
     position: absolute;
     bottom: 15%;
-    background-color: rgba(43, 43, 43, 0.6);
+    background-color: rgba(73, 71, 69, 0.6);
     color: white;
     height: auto;
     background-image: url(../img/fondo-suelo-blanco.png);
@@ -1026,7 +1036,7 @@ footer a { color: white; }
   stroke: #aaa;
 }
 #map-container {
-    width: 51%;
+    width: 100%;
     margin: 0 auto;
     height: 100%;
     position: fixed;

@@ -8,7 +8,7 @@ function _map(d3,colombiaGeoJSON)
   const svg = d3.create("svg");
 
   var width = 960,
-      height = 500,
+      height = 600,
       centered;
 
   // Define color scale
@@ -18,7 +18,7 @@ function _map(d3,colombiaGeoJSON)
   .range(['#fff', '#409A99']);
 
   var projection = d3.geoMercator()
-  .scale(1500)
+  .scale(2000)
   // Center the Map in Colombia
   .center([-74, 4.5])
   .translate([width / 2, height / 2]);
@@ -83,7 +83,7 @@ function _map(d3,colombiaGeoJSON)
       var centroid = path.centroid(d);
       x = centroid[0];
       y = centroid[1];
-      k = 4;
+      k = 4; 
       centered = d;
     } else {
       x = width / 2;
@@ -94,7 +94,7 @@ function _map(d3,colombiaGeoJSON)
 
     // Highlight the clicked province
     mapLayer.selectAll('path')
-      .style('fill', function(d){return centered && d===centered ? '#D5708B' : fillFn(d);});
+      .style('fill', function(d){return centered && d===centered ? '#008F39' : fillFn(d);});
 
     // Zoom
     g.transition()
@@ -104,7 +104,7 @@ function _map(d3,colombiaGeoJSON)
 
   function mouseover(d){
     // Highlight hovered province
-    d3.select(this).style('fill', 'orange');
+    d3.select(this).style('fill', 'green');
 
     // Draw effects
     textArt(nameFn(d));
@@ -113,7 +113,7 @@ function _map(d3,colombiaGeoJSON)
   function mouseout(d){
     // Reset province color
     mapLayer.selectAll('path')
-      .style('fill', function(d){return centered && d===centered ? '#D5708B' : fillFn(d);});
+      .style('fill', function(d){return centered && d===centered ? '#008F39' : fillFn(d);});
 
     // Remove effect text
     effectLayer.selectAll('text').transition()
