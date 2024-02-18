@@ -1188,6 +1188,10 @@ background: url(../img/trabaja\ con\ nostros\ 1.png);
     .sidebar {
     /*      padding: 60px 30px;*/
     }
+
+    .sec1 p{
+        font-size: 0.5em;
+    }
 }
 
 @media (max-width: 1340px) {
