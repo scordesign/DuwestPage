@@ -52,7 +52,7 @@ http://www.tooplate.com/view/2102-constructive
     overflow: hidden;
     font-size: calc((1vw + 1vh) + 1em);
     width: 37%;
-    height: 25%;
+    height: fit-content;
     background: #07670B3D;
     border: solid #5BAB31 calc(0.03vw + 0.03vh);
     border-radius: calc(1vw + 1vh);
