@@ -481,6 +481,10 @@ footer a { color: white; }
     height: 100vh;
     background-color: #33ccff;
     z-index: 1;
+    background-image: url(../img/Imagen\ categoria-06.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .catalogo1 a{
     width: 25%;
@@ -495,16 +499,28 @@ footer a { color: white; }
     width: 25%;
     height: 100vh;
     background-color: #e74c3c;
+    background-image: url(../img/Imagen\ categoria-07.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .catalogo3{
     width: 25%;
     height: 100vh;
     background-color: #f9c922;
+    background-image: url(../img/Imagen\ categoria-08.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .catalogo4{
     width: 25%;
     height: 100vh;
     background-color: #FFF;
+    background-image: url(../img/Imagen\ categoria-09.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .box1{
     width: 17%;
