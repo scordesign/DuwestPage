@@ -1169,7 +1169,20 @@ background: url(../img/trabaja\ con\ nostros\ 1.png);
 .workUsdv-1 img{
     height: 25%;
 }
+.alerta {
+    position: fixed;
+    top: 1%;
+    left: 1%;
+    padding: 1% 1%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 9999;
+    border-bottom-right-radius: 2rem;
+}
 
+.alerta p {
+    font-size: 20px;
+}
 .workUsdv-1 h4{
     margin-bottom: 0px;
 }
@@ -1206,7 +1219,7 @@ background: url(../img/trabaja\ con\ nostros\ 1.png);
     }
 
     .sec1 p{
-        font-size: 0.5em;
+        font-size: 0.43em;
     }
 }
 

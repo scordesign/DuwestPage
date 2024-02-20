@@ -48,7 +48,8 @@ http://www.tooplate.com/view/2102-constructive
 			<div class="loader-section section-right"></div>
 		</div>
 
-		<div id="alerta" class="alert custom-alert" role="alert">
+		<div id="alerta" class="alerta">
+			<p>¡Éxito! Tu mensaje se ha enviado correctamente.</p>
 		</div>
 
 		<div class="modalBackground hide" id="modalBackground">
@@ -675,6 +676,22 @@ map.invalidateSize();
 				$("#tmSideBar").removeClass("show");
 			});
 		}
+
+		
+			// Add Event Listener to each Nav item
+			$("#tmNavLink1").click(function (e) {
+				e.preventDefault();
+
+				var currentNavItem = $(this);
+				changePage(currentNavItem);
+
+				setupCarousel();
+				setupFooter();
+
+				// Hide the nav on mobile
+				$("#tmSideBar").removeClass("show");
+			});
+		
 
 
 		function changePage(currentNavItem) {
