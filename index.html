@@ -680,9 +680,13 @@ map.invalidateSize();
 		
 			// Add Event Listener to each Nav item
 			$("#tmNavLink1").click(function (e) {
-				e.preventDefault();
+				changOthers(e,this);
+			});
+		
+		function changOthers(e,element) { 
+			e.preventDefault();
 
-				var currentNavItem = $(this);
+				var currentNavItem = $(element);
 				changePage(currentNavItem);
 
 				setupCarousel();
@@ -690,8 +694,7 @@ map.invalidateSize();
 
 				// Hide the nav on mobile
 				$("#tmSideBar").removeClass("show");
-			});
-		
+		 }	
 
 
 		function changePage(currentNavItem) {
