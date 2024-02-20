@@ -218,11 +218,11 @@ p:last-child {
     right: 5%;
     margin-top: 3%;
     width: 40vw;
-    height: 8%;
+    height: fit-content;
 }
 
-#imglogo{
-    height: 90%;
+#imglogo a{
+    height: 30%;
 
 }
 
@@ -235,7 +235,7 @@ p:last-child {
 }
 
 #imglogo img{
-    height: 100%;
+    width: 100%;
 }
 
 .tm-content {
