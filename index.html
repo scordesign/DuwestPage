@@ -82,7 +82,7 @@ http://www.tooplate.com/view/2102-constructive
 			<span><i class="fab fa-facebook-f"></i></span>
 			<span><i class="fab fa-instagram"></i></span>
 			<span id="user-add"><i class="far fa-user"></i></span>
-			<span><i id="TmMainNav" class="fas fa-bars"></i></span>
+			<span id="bars-menu"><i id="TmMainNav" class="fas fa-bars"></i></span>
 
 
 
@@ -596,7 +596,6 @@ map.invalidateSize();
 			});
 
 			function ajustarNav() {
-				var posicionSideBar = $("#tmSideBar").offset();
 				var posicionTmMainNav = $("#TmMainNav").offset();
 				var posicionImgFlag = $("#imgFlag").offset();
 				var posicionMenuBars = $("#TmMainNav").offset();
@@ -604,11 +603,27 @@ map.invalidateSize();
 
 
 
+				var posicionBar = $("#bars-menu").offset();
+
+				$("#tmSideBar").css({
+					"width": ((posicionBar.left + ($("#bars-menu").width()*3.4)) - posicionImglogo.left) + "px"
+				});
+
+				var posicionSideBar = $("#tmSideBar").offset();
+
+				posicionTmMainNav = $("#TmMainNav").offset();
+				posicionImgFlag = $("#imgFlag").offset();
+				posicionMenuBars = $("#TmMainNav").offset();
+				posicionImglogo = $("#imglogo").offset();
+
+
 				$("#dropDownBar").css({
 					"top": (posicionSideBar.top + $("#tmSideBar").height()) + "px",
 					"left": (posicionImgFlag.left) + "px",
 					"width": (posicionMenuBars.left - posicionImgFlag.left) + "px"
 				});
+
+				
 
 			}
 

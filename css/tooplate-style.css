@@ -197,6 +197,9 @@ p:last-child {
    
     margin: 1% 1.2%;
 }
+#tmSideBar span i{
+    font-size: 3.5vh;
+}
 
 .sidebar { 
     backdrop-filter: blur(10px);
@@ -228,15 +231,15 @@ p:last-child {
 }
 
 #imgFlag{
-    height: 30%;
+    height: 10%;
 }
 
 #imgFlag img{
-    height: 30px;
+    height: 3.9vh;
 }
 
 #imglogo img{
-    width: 150px;
+    width: 10.5vw;
 }
 
 .tm-content {

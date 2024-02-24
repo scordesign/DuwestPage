@@ -1,4 +1,5 @@
 <?php
+require_once(__DIR__ .'/../model/returnModel.php');
 class users
 {
 
@@ -11,7 +12,9 @@ class users
 
     public function RegisterUser()
     {
+        
         try {
+
             // Crear una instancia de la clase PDO
             $conexion = new Conexion();
             $pdo = $conexion->obtenerConexion();
@@ -36,9 +39,19 @@ class users
             // Ejecutar la sentencia SQL con los valores correspondientes
             $stmt->execute();
 
-            echo 200;
+            $returnModel = new returnModel(200,null,"logueado correctamente");
+
+            var_dump($returnModel);
+
+            $returnModelUsuario = json_encode($returnModel);
+            echo $returnModelUsuario;
         } catch (PDOException $e) {
-            echo 500 . $e->getMessage();
+
+            $returnModel = new returnModel(500,null,$e->getMessage());
+
+           
+            $returnModelUsuario = json_encode($returnModel);
+            echo $returnModelUsuario;
         }
 
         // $statement = $pdo->prepare("SELECT * FROM products");
