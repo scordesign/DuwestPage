@@ -536,7 +536,7 @@ footer a { color: white; }
     font-weight: bold;
     z-index: 2;
     text-align: right;
-    font-size: 32px;
+    font-size: 25px;
 }
 .box1 a:hover{
     color: #5BAB31;
@@ -559,7 +559,7 @@ footer a { color: white; }
     text-transform: uppercase;
     font-weight: bold;
     text-align: right;
-    font-size: 32px;
+    font-size: 25px;
     
 }
 .box2 a:hover{
@@ -583,7 +583,7 @@ footer a { color: white; }
     text-transform: uppercase;
     font-weight: bold;
     text-align: right;
-    font-size: 32px;
+    font-size: 25px;
 }
 .box3 a:hover{
     color: #5BAB31;
@@ -608,7 +608,7 @@ footer a { color: white; }
     text-transform: uppercase;
     font-weight: bold;
     text-align: right;
-    font-size: 32px;
+    font-size: 25px;
 }
 .box4 a:hover{
     color: #5BAB31;
@@ -671,6 +671,7 @@ footer a { color: white; }
     font-family: 'Century Gothic', sans-serif;
     font-size: 22px;
     padding-bottom: 1%;
+    padding-top: 1%;
     text-align: justify;
     line-height: 27px;
  
@@ -1273,6 +1274,108 @@ background: url(../img/trabaja\ con\ nostros\ 1.png);
     margin-left: 12.5ß%;
     bottom: 0px;
     }
+    .parrafo-conocenos {
+        backdrop-filter: blur(10px);
+        position: relative;
+        top: 9%;
+        background-color: rgba(73, 71, 69, 0.6);
+        color: white;
+        height: auto;
+        background-image: url(../img/fondo-suelo-blanco.png);
+        font-size: medium;
+        border-radius: 12px;
+        font-family: 'Century Gothic', sans-serif;
+        font-size: 22px;
+        padding-bottom: 1%;
+        text-align: justify;
+        line-height: 27px;
+    }
+    .parrafo-conocenos p {
+        color: white;
+        font-family: ;
+        font-size: 15px;
+        padding-left: 2%;
+        padding-right: 2%;
+        text-align: justify;
+        line-height: 1.1;
+        font-family: 'Century Gothic', sans-serif;
+    }
+    
+    .img-conocenos {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 30vh;
+        position: relative;
+        /* bottom: -15%; */
+        /* background-color: #31aa47; */
+        top: 14%;
+    }    
+    .img-conocenos img {
+        /* width: 35%; */
+        border-radius: 10px;
+        height: 200px;
+    }
+    .title-conocenos {
+     
+        font-size: 27px;
+    }
+    .img-conocenos a {
+        
+        font-size: 27px;
+       
+    }
+    .title-vision {
+        
+        top: 17%;
+        font-size: 27px;
+    }
+    .politica {
+        
+        top: 17%;
+        font-size: 17px;
+        
+    }
+    .vision {
+       
+        top: 20%;
+        background-color: rgba(0,139,58,0.6);
+        font-size: 27px;
+       
+    }
+    .parrafo-vision p {
+      
+        font-size: 15px;
+        
+    }
+    .parrafo-mision p {
+        
+        font-size: 15px;
+    }
+    .popup-content {
+       
+        top: 45%;
+        padding: 18px;
+        border-radius: 5px;
+        max-width: 100%;
+
+    }
+    .popup-content h3 {
+        
+        font-size: 17px;
+    }
+    .popup-content h4 {
+        
+        font-size: 15px;
+        
+    }
+    .popup-content p {
+       
+        font-size: 88%;
+        
+    }
+    
 }
 
 @media (max-width: 1340px) {
