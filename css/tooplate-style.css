@@ -8,28 +8,18 @@ http://www.tooplate.com/view/2102-constructive
 #inlineFrameExample{
     border: 0px;
 }
+/* Importación de las fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Century+Gothic:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Leomn+Milk&display=swap');
 
-/* Define estilos para los elementos que usarán la fuente Centuri Gothic */
-.centuri-gothic {
-    font-family: 'Centuri Gothic', sans-serif !important;
+/* Uso de las fuentes */
+
+.fuente-century-gothic {
+  font-family: 'Century Gothic', sans-serif;
 }
 
-
-
-/* Importa la fuente Lemon Milk */
-
-@import url('https://fonts.googleapis.com/css2?family=Lemon+Milk&display=swap');
-
-/* @font-face {
-    font-family: 'Lemon Milk';
-    src: url('ruta/a/la/fuente/lemon-milk.woff2') format('woff2'),
-         url('ruta/a/la/fuente/lemon-milk.woff') format('woff'); */
-    /* Asegúrate de reemplazar 'ruta/a/la/fuente/lemon-milk.woff2' y 'ruta/a/la/fuente/lemon-milk.woff' con las rutas correctas a tus archivos de fuente */
-/* } */
-
-/* Define estilos para los elementos que usarán la fuente Lemon Milk */
-.lemon-milk {
-    font-family: 'Lemon Milk', sans-serif !important;
+.fuente-leomn-milk {
+  font-family: 'Leomn Milk', sans-serif;
 }
 
 .bold{
@@ -640,20 +630,20 @@ footer a { color: white; }
     position: fixed;
     color: white;
     /* background-color: rgba(0,0,0,0.25); */
-    width: 80%;
+    width: 75%;
     overflow: hidden;
     /* display: flex; */
     justify-content: space-between;
     align-items: center;
     height: 100vh;
-    margin-left: 10%;
+    margin-left: 12.5%;
     bottom: 0px;
 }
  
 
 .title-conocenos{
     position: relative;
-    top: 15%;
+    top: 17%;
     background-color: rgba(0,139,58,0.6);
     color: white;
     text-transform: uppercase;
@@ -671,17 +661,16 @@ footer a { color: white; }
 .parrafo-conocenos{
     backdrop-filter: blur(10px);
     position: relative;
-    top: 14%;
+    top: 12%;
     background-color: rgba(73, 71, 69, 0.6);
     color: white;
     height: auto;
     background-image: url(../img/fondo-suelo-blanco.png);
     font-size: medium;
     border-radius: 12px;
-    font-family: 'Lemon Milk', sans-serif;
+    font-family: 'Century Gothic', sans-serif;
     font-size: 22px;
-    padding-bottom: 2%;
-    font-weight: 400;
+    padding-bottom: 1%;
     text-align: justify;
     line-height: 27px;
  
@@ -689,12 +678,14 @@ footer a { color: white; }
 .parrafo-conocenos p{
  
     color: white;
-    font-family: 'Lemon Milk', sans-serif;
+    font-family: ;
     font-size: 17px;
     padding-left: 2%;
     padding-right: 2%;
     text-align: justify;
-    line-height: 1.2;
+    line-height: 1.1;
+    font-family: 'Century Gothic', sans-serif;
+
 }
 
 .img-conocenos{
@@ -706,13 +697,14 @@ footer a { color: white; }
     position: relative;
     /* bottom: -15%; */
     /* background-color: #31aa47; */
-    top: 20%;
+    top: 15%;
 
     
 }
 .img-conocenos img{
-    width: 35%;
+            /* width: 35%; */
     border-radius: 10px;
+    height: 215px;
 }
 .img-conocenos a{
     background-color: rgba(0,139,58,0.6);
@@ -1266,6 +1258,20 @@ background: url(../img/trabaja\ con\ nostros\ 1.png);
 
     .sec1 p{
         font-size: 0.43em;
+    }
+
+    .conocenos{
+    position: fixed;
+    color: white;
+    /* background-color: rgba(0,0,0,0.25); */
+    width: 75%;
+    overflow: hidden;
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    margin-left: 12.5ß%;
+    bottom: 0px;
     }
 }
 
