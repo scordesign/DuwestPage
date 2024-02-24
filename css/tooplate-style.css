@@ -1381,6 +1381,7 @@ background: url(../img/trabaja\ con\ nostros\ 1.png);
 
 #loader-wrapper {
     position: fixed;
+    background-color: rgba(230, 230, 230);
     top: 0;
     left: 0;
     width: 100%;
@@ -1388,7 +1389,7 @@ background: url(../img/trabaja\ con\ nostros\ 1.png);
     z-index: 2000;
 }
 #loader {
-    display: block;
+/*    display: block;
     position: relative;
     left: 50%;
     top: 50%;
@@ -1397,12 +1398,19 @@ background: url(../img/trabaja\ con\ nostros\ 1.png);
     margin: -75px 0 0 -75px;
     border-radius: 50%;
     border: 3px solid transparent;
-    border-top-color: green;
+    border-top-color: green;*/
 
-    -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
-    animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
-
+    /*-webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+    /*animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
     z-index: 1001;
+}
+
+#loader img{
+
+    width: 40%;
+    position: fixed;
+    left: 30%;
+
 }
 
 #loader:before {
@@ -1465,7 +1473,7 @@ background: url(../img/trabaja\ con\ nostros\ 1.png);
     top: 0;
     width: 51%;
     height: 100%;
-    background: #222222;
+    background: rgba(230, 230, 230);
     z-index: 1000;
     -webkit-transform: translateX(0);  /* Chrome, Opera 15+, Safari 3.1+ */
     -ms-transform: translateX(0);  /* IE 9 */
