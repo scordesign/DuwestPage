@@ -1113,6 +1113,129 @@ footer a { color: white; }
 
 }*/
 
+.products{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    background-image: url(../img/fondo-7.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.products1{
+        width: 100%;
+        height: 32vh;
+        position: fixed;
+        top: 0%;
+        background-image: url(../img/camion.png);
+        background-repeat: no-repeat;
+        background-size: cover;    
+        background-position: center;
+}
+.products12{
+    width: 100%;
+    height: 32vh;
+    position: fixed;
+    top: 0%;
+    background-image: url(../img/nutricion.png);
+    background-repeat: no-repeat;
+    background-size: cover;    
+    background-position: 10%;
+}
+.products13{
+    width: 100%;
+    height: 32vh;
+    position: fixed;
+    top: 0%;
+    background-image: url(../img/pastos.png);
+    background-repeat: no-repeat;
+    background-size: cover;    
+    background-position: 10%;
+}
+.products14{
+    width: 100%;
+    height: 32vh;
+    position: fixed;
+    top: 0%;
+    background-image: url(../img/maquinas.png);
+    background-repeat: no-repeat;
+    background-size: cover;    
+    background-position: bottom;
+}
+.title-product{
+    position: relative;
+    top: 66%;
+    background-color: rgba(0,139,58,0.6);
+    color: white;
+    text-transform: uppercase;
+    height: auto;
+    font-size: large;
+    border-radius: 15px;
+    font-family: 'Centuri Gothic', sans-serif;
+    font-weight: 600;
+    font-size: 35px;
+    width: fit-content;
+    left: 55%;
+}
+.title-news{
+    position: relative;
+    top: 16%;
+    background-color: rgba(0,139,58,0.6);
+    color: white;
+    text-transform: uppercase;
+    height: auto;
+    font-size: large;
+    border-radius: 15px;
+    font-family: 'Centuri Gothic', sans-serif;
+    font-weight: 600;
+    font-size: 35px;
+    width: fit-content;
+    left: 55%;
+}
+.logo-supliers{
+    position: relative;
+    background-color: #006838;
+    height: 20vh;
+    width: 80%;
+    left: 10%;
+    top: 32%;
+}
+.filter-product{
+    position: relative;
+    background-color: white;
+    height: 40vh;
+    width: 14%;
+    left: 10%;
+    top: 34%;
+
+}
+.products2{
+    position: fixed;
+    background-color: rgba(230, 230, 230);
+    height: 40vh;
+    width: 65%;
+    left: 25%;
+    top: 54%;
+}
+.productsmmaq{
+    position: fixed;
+    background-color: rgba(230, 230, 230);
+    height: 60vh;
+    width: 80%;
+    left: 10%;
+    top: 34%;
+}
+.banner-mavuno{
+    position: absolute;
+    bottom: 2%;
+    background-image: url(../img/banner\ mavuno.png);
+    width: 100%;
+    background-size: 100%;
+    height: 30%;
+    z-index: 1002;
+    background-repeat: no-repeat;
+
+}
+
 @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Josefin+Slab|Arvo|Lato|Vollkorn|Abril+Fatface|Old+Standard+TT|Droid+Sans|Lobster|Inconsolata|Montserrat|Playfair+Display|Karla|Alegreya|Libre+Baskerville|Merriweather|Lora|Archivo+Narrow|Neuton|Signika|Questrial|Fjalla+One|Bitter|Varela+Round);
 
 .background {
