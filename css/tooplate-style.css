@@ -679,7 +679,6 @@ footer a { color: white; }
 .parrafo-conocenos p{
  
     color: white;
-    font-family: ;
     font-size: 17px;
     padding-left: 2%;
     padding-right: 2%;
@@ -950,6 +949,39 @@ footer a { color: white; }
     bottom: -20%;
 }
 
+/* Estilos para la barra de desplazamiento en el div con la clase "scrollable" */
+#modal {
+    overflow: auto;
+    /* Estilos de la barra de desplazamiento */
+}
+
+/* WebKit (Chrome, Safari, Opera) */
+#modal::-webkit-scrollbar {
+    width: 8px; /* Ancho de la barra */
+}
+
+#modal::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3); /* Color del thumb (el control deslizante) */
+    border-radius: 4px; /* Radio de borde del thumb */
+}
+
+/* Firefox */
+#modal::-moz-scrollbar {
+    width: 8px;
+}
+
+#modal::-moz-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+/* Internet Explorer */
+#modal {
+    scrollbar-width: thin; /* Ancho de la barra en IE/Edge */
+    scrollbar-color: rgba(0, 0, 0, 0.3) transparent; /* Color de la barra y del thumb en IE/Edge */
+}
+
+
 #modal{
     border-radius: 2%;
     position: relative;
@@ -960,6 +992,7 @@ footer a { color: white; }
     margin-right: auto;
     margin-top: 5vh;
     background-color: rgba(255, 255, 255, 0.719);
+    overflow: auto;
 }
 
 #modalBackground{
@@ -1271,7 +1304,7 @@ background: url(../img/trabaja\ con\ nostros\ 1.png);
     justify-content: space-between;
     align-items: center;
     height: 100vh;
-    margin-left: 12.5ß%;
+    margin-left: 12.5%;
     bottom: 0px;
     }
     .parrafo-conocenos {
@@ -1292,7 +1325,6 @@ background: url(../img/trabaja\ con\ nostros\ 1.png);
     }
     .parrafo-conocenos p {
         color: white;
-        font-family: ;
         font-size: 15px;
         padding-left: 2%;
         padding-right: 2%;
