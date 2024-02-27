@@ -267,8 +267,25 @@ http://www.tooplate.com/view/2102-constructive
 
 						</div>
 						<div class="mision">
+								<!-- Pop Up fotos -->
 
-							<a href="#">&nbsp; Ver más fotos&nbsp; </a>
+				<div id="popup" style="display: none;">
+
+					<div class="contenedor-popup"> 
+					<div class="box">
+					<span style="--i:1;"><img src="img/Fondo-2.png" alt="Imagen 1"></span>
+					<span style="--i:2;"><img src="img/Fondo-3.png" alt="Imagen 1"></span>
+					<span style="--i:3;"><img src="img/Fondo-4.png" alt="Imagen 1"></span>
+					<span style="--i:4;"><img src="img/Fondo-8.png" alt="Imagen 1"></span>
+					<span style="--i:5;"><img src="img/Foto conoce más de duwest 1.JPG" alt="Imagen 1"></span>
+					<span style="--i:6;"><img src="img/Foto conoce más de Duwest 2.png" alt="Imagen 1"></span>
+					<span style="--i:7;"><img src="img/Foto Novedades y lanzamiento 1.png" alt="Imagen 1"></span>
+				</div>
+			</div>  
+		
+
+			</div>
+							<button onclick="mostrarPopup()">Ver más fotos</button>
 						</div>
 
 
@@ -385,6 +402,7 @@ http://www.tooplate.com/view/2102-constructive
 
 				</div>
 			</div>
+			
 			<!-- section 8 -->
 			<section id="tm-section-8" class="tm-section">
 				<div class="bgWorkUs bg-a"></div>
@@ -620,7 +638,15 @@ map.invalidateSize();
 	<script type="text/javascript" src="slick/slick.min.js"></script> <!-- Slick Carousel -->
 	<script src="js/RequestScript.js"></script><!-- forms and request -->
 	<script src="js/script.js"></script>
-
+	<script>
+		function mostrarPopup() {
+		  document.getElementById("popup").style.display = "block";
+		}
+		
+		function cerrarPopup() {
+		  document.getElementById("popup").style.display = "none";
+		}
+	</script>
 	<script>
 
 		var sidebarVisible = false;
