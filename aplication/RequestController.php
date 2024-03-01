@@ -5,6 +5,7 @@ require_once('controller/UserController.php');
 require_once('connection/Connection.php');
 
 $users = new users();
+$Products = new Products();
 switch (strtolower($_SERVER["REQUEST_METHOD"])) {
     case "post":
 
@@ -24,6 +25,9 @@ switch (strtolower($_SERVER["REQUEST_METHOD"])) {
                 break;
             case "destroySession":
                 echo destroySession();
+                break;
+            case "getfilters":
+                echo $Products->getFilters();
                 break;
         }
 
