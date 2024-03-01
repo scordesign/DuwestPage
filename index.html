@@ -229,7 +229,7 @@ http://www.tooplate.com/view/2102-constructive
 					</div>
 
 				</nav>
-				<div class="footer2">
+				<div class="footer2"id="footer2">
 					<img src="img/gif proveedores v7.gif">
 				</div>
 			</section>
@@ -281,6 +281,8 @@ http://www.tooplate.com/view/2102-constructive
 					<span style="--i:6;"><img src="img/Foto conoce más de Duwest 2.png" alt="Imagen 1"></span>
 					<span style="--i:7;"><img src="img/Foto Novedades y lanzamiento 1.png" alt="Imagen 1"></span>
 				</div>
+				<button onclick="cerrarPopup()">Ver más fotos</button>
+
 			</div>  
 		
 
@@ -504,7 +506,9 @@ map.invalidateSize();
 			</div>
 			<div class="logo-supliers"></div>
 			<div class="filter-product"></div>
-			<div class="products2"></div>
+			<div class="products2">
+				<button id="addProduct">agregar</button>
+			</div>
 		</div>
 	</section>
 
@@ -822,9 +826,7 @@ map.invalidateSize();
 			$(".tm-main-nav a").removeClass("active");
 			currentNavItem.addClass("active");
 
-			$(currentPageID).hide();
-
-
+		
 			switch (currentNavItem.data().page) {
 				case '#tm-section-8':
 				case '#tm-section-2':
@@ -840,9 +842,14 @@ map.invalidateSize();
 					$("footer").hide();
 					// Expected output: "Mangoes and papayas are $2.79 a pound."
 					break;
+				case '#loaderpage':
+				$("footer2").hide();
+				$("footer").hide();
 				default:
 					$("footer").show();
 			}
+		
+
 
 
 			console.log(currentPageID + '>>>>>>>>>>>>>>');

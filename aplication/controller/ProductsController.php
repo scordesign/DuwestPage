@@ -1,4 +1,5 @@
 <?php
+require_once(__DIR__ . '/../model/returnModel.php');
 class Products
 {
 
@@ -7,19 +8,50 @@ class Products
     {
     }
 
-    public function obtenerConexion()
+    public function getFilters() : String
     {
+        $returnFields = array();
+
         $conexion = new Conexion();
         $pdo = $conexion->obtenerConexion();
 
-        $statement = $pdo->prepare("SELECT * FROM products");
+        $statement = $pdo->prepare("SELECT * FROM productfilters");
         $statement->execute();
         $resultado = $statement->fetchAll();
         
-        echo $resultado;
+
+        $returnFields["data"] = $resultado;
+        $returnFields["status"] = 200;
+        $returnFields["message"] = "correcto";
+
+        $returnProduct = json_encode($returnFields);
 
 
-        return json_encode($resultado);
+        return json_encode($returnProduct);
+
+        // Iterar sobre el resultado
+    }
+
+    public function getFilters()
+    {
+        $returnFields = array();
+
+        $conexion = new Conexion();
+        $pdo = $conexion->obtenerConexion();
+
+        $statement = $pdo->prepare("SELECT * FROM productfilters");
+        $statement->execute();
+        $resultado = $statement->fetchAll();
+        
+
+        $returnFields["data"] = $resultado;
+        $returnFields["status"] = 200;
+        $returnFields["message"] = "correcto";
+
+        $returnProduct = json_encode($returnFields);
+
+
+        return json_encode($returnProduct);
 
         // Iterar sobre el resultado
     }
