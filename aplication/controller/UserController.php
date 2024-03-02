@@ -1,6 +1,5 @@
 <?php
     
-require_once(__DIR__ . '/../model/returnModel.php');
 class users
 {
 
@@ -87,7 +86,7 @@ class users
             $returnUsuario = json_encode($returnFields);
             return $returnUsuario;
             
-        } catch (PDOException $e) {
+        } catch (\Throwable  $e) {
 
             $returnFields["status"] = 500;
             $returnFields["message"] = $e->getMessage();
@@ -173,7 +172,7 @@ class users
 
             $returnUsuario = json_encode($returnFields);
             return $returnUsuario;
-        } catch (PDOException $e) {
+        } catch (\Throwable  $e) {
 
             $returnFields["status"] = 500;
             $returnFields["message"] = $e->getMessage();

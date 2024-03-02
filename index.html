@@ -105,14 +105,15 @@ http://www.tooplate.com/view/2102-constructive
 						</a>
 					</li>
 					<li>
-						<a href="#products" id="tmNavLink2" class="scrolly" data-bg-img="fondo-suelo-blanco-vertically.png"
-							data-page="#tm-section-12" data-page-type="carousel">
+						<a href="#products" id="tmNavLink2" class="scrolly"
+							data-bg-img="fondo-suelo-blanco-vertically.png" data-page="#tm-section-12"
+							data-page-type="carousel">
 							<i class="fa fa-caret-right" aria-hidden="true"></i>Portafolio protección de cultivos.
 						</a>
 					</li>
 					<li>
 						<a href="#company" class="scrolly" data-bg-img="fondo-suelo-blanco-vertically.png"
-							data-page="#tm-section-13">
+							data-page="#tm-section-13" onclick="chargeProducts()">
 							<i class="fa fa-caret-right" aria-hidden="true"></i>Portafolio nutrición especializada
 						</a>
 					</li>
@@ -134,7 +135,7 @@ http://www.tooplate.com/view/2102-constructive
 							<i class="fa fa-caret-right" aria-hidden="true"></i>Novedades y lanzamientos
 						</a>
 					</li>
-					
+
 					<li>
 						<a href="#contact" class="scrolly" data-bg-img="Fondo-2.png" data-page="#tm-section-11">
 							<i class="fa fa-caret-right" aria-hidden="true"></i>Asesores en tu zona
@@ -229,7 +230,7 @@ http://www.tooplate.com/view/2102-constructive
 					</div>
 
 				</nav>
-				<div class="footer2"id="footer2">
+				<div class="footer2" id="footer2">
 					<img src="img/gif proveedores v7.gif">
 				</div>
 			</section>
@@ -240,7 +241,7 @@ http://www.tooplate.com/view/2102-constructive
 				<nav id="tmMainNav" class="tm-main-nav">
 					<div class="conocenos">
 						<div class="title-conocenos">
-							&nbsp; &nbsp; &nbsp; conoce más de duwest colombia&nbsp;  &nbsp;  &nbsp;
+							&nbsp; &nbsp; &nbsp; conoce más de duwest colombia&nbsp; &nbsp; &nbsp;
 						</div><br><br>
 						<div class="parrafo-conocenos">
 
@@ -267,26 +268,29 @@ http://www.tooplate.com/view/2102-constructive
 
 						</div>
 						<div class="mision">
-								<!-- Pop Up fotos -->
+							<!-- Pop Up fotos -->
 
-				<div id="popup" style="display: none;">
+							<div id="popup" style="display: none;">
 
-					<div class="contenedor-popup"> 
-					<div class="box">
-					<span style="--i:1;"><img src="img/Fondo-2.png" alt="Imagen 1"></span>
-					<span style="--i:2;"><img src="img/Fondo-3.png" alt="Imagen 1"></span>
-					<span style="--i:3;"><img src="img/Fondo-4.png" alt="Imagen 1"></span>
-					<span style="--i:4;"><img src="img/Fondo-8.png" alt="Imagen 1"></span>
-					<span style="--i:5;"><img src="img/Foto conoce más de duwest 1.JPG" alt="Imagen 1"></span>
-					<span style="--i:6;"><img src="img/Foto conoce más de Duwest 2.png" alt="Imagen 1"></span>
-					<span style="--i:7;"><img src="img/Foto Novedades y lanzamiento 1.png" alt="Imagen 1"></span>
-				</div>
-				<button onclick="cerrarPopup()">Ver más fotos</button>
+								<div class="contenedor-popup">
+									<div class="box">
+										<span style="--i:1;"><img src="img/Fondo-2.png" alt="Imagen 1"></span>
+										<span style="--i:2;"><img src="img/Fondo-3.png" alt="Imagen 1"></span>
+										<span style="--i:3;"><img src="img/Fondo-4.png" alt="Imagen 1"></span>
+										<span style="--i:4;"><img src="img/Fondo-8.png" alt="Imagen 1"></span>
+										<span style="--i:5;"><img src="img/Foto conoce más de duwest 1.JPG"
+												alt="Imagen 1"></span>
+										<span style="--i:6;"><img src="img/Foto conoce más de Duwest 2.png"
+												alt="Imagen 1"></span>
+										<span style="--i:7;"><img src="img/Foto Novedades y lanzamiento 1.png"
+												alt="Imagen 1"></span>
+									</div>
+									<button onclick="cerrarPopup()">Ver más fotos</button>
 
-			</div>  
-		
+								</div>
 
-			</div>
+
+							</div>
 							<button onclick="mostrarPopup()">Ver más fotos</button>
 						</div>
 
@@ -404,7 +408,7 @@ http://www.tooplate.com/view/2102-constructive
 
 				</div>
 			</div>
-			
+
 			<!-- section 8 -->
 			<section id="tm-section-8" class="tm-section">
 				<div class="bgWorkUs bg-a"></div>
@@ -482,71 +486,75 @@ antioquiaLayer.bindTooltip("Antioquia"); // Mensaje al pasar el mouse
 map.invalidateSize();
   </script>-->
 
-	<!-- section 12 -->
-	<section id="tm-section-12" class="tm-section">
-		<div class="products">
-			<div class="products1">
-				<div class="title-product">
-					&nbsp;protección de cultivos&nbsp;
+			<!-- section 12 -->
+			<section id="tm-section-12" class="tm-section">
+				<div class="products">
+					<div class="products1">
+						<div class="title-product">
+							&nbsp;protección de cultivos&nbsp;
+						</div>
+					</div>
+					<div class="logo-supliers"></div>
+					<div class="filter-product"></div>
+					<div class="products2"></div>
 				</div>
-			</div>
-			<div class="logo-supliers"></div>
-			<div class="filter-product"></div>
-			<div class="products2"></div>
-		</div>
-	</section>
+			</section>
 
-	<!-- section 13 -->
-	<section id="tm-section-13" class="tm-section">
-		<div class="products">
-			<div class="products12">
-				<div class="title-product">
-					&nbsp;nutrición especializada&nbsp;
+			<!-- section 13 -->
+			<section id="tm-section-13" class="tm-section">
+				<div class="products">
+					<div class="products12">
+						<div class="title-product">
+							&nbsp;nutrición especializada&nbsp;
+						</div>
+					</div>
+					<div class="logo-supliers"></div>
+					<div class="filter-product"></div>
+					<div class="products2">
+						<div class="adminSession hide alert alert-dark" style="width: 100%;text-align: center;">
+							<button id="addProduct" class="btn btn-primary" >Agregar producto</button>
+							<button id="addFilter" class="btn btn-primary" >Agregar filtro</button>
+						</div>
+								
+					</div>
 				</div>
-			</div>
-			<div class="logo-supliers"></div>
-			<div class="filter-product"></div>
-			<div class="products2">
-				<button id="addProduct">agregar</button>
-			</div>
-		</div>
-	</section>
+			</section>
 
-	<!-- section 14 -->
-	<section id="tm-section-14" class="tm-section">
-		<div class="products">
-			<div class="banner-mavuno"></div>
-			<div class="products13">
-				<div class="title-product">
-					&nbsp;semillas de pastos&nbsp;
-				</div>
-				
-			</div>
-			
-			<div class="productsmmaq"></div>
-		</div>
-	</section>
+			<!-- section 14 -->
+			<section id="tm-section-14" class="tm-section">
+				<div class="products">
+					<div class="banner-mavuno"></div>
+					<div class="products13">
+						<div class="title-product">
+							&nbsp;semillas de pastos&nbsp;
+						</div>
 
-	<!-- section 15 -->
-	<section id="tm-section-15" class="tm-section">
-		<div class="products">
-			<div class="products14">
-				<div class="title-product">
-					&nbsp;maquinaria y equipos&nbsp;
+					</div>
+
+					<div class="productsmmaq"></div>
 				</div>
-			</div>
-			
-			<div class="productsmmaq"></div>
-		</div>
-	</section>
-		<!-- section 16 -->
-		<section id="tm-section-16" class="tm-section">
-			<div class="products">
-					
-				
-				
-			</div>
-		</section>
+			</section>
+
+			<!-- section 15 -->
+			<section id="tm-section-15" class="tm-section">
+				<div class="products">
+					<div class="products14">
+						<div class="title-product">
+							&nbsp;maquinaria y equipos&nbsp;
+						</div>
+					</div>
+
+					<div class="productsmmaq"></div>
+				</div>
+			</section>
+			<!-- section 16 -->
+			<section id="tm-section-16" class="tm-section">
+				<div class="products">
+
+
+
+				</div>
+			</section>
 
 			<!-- section 4 -->
 			<section id="tm-section-4" class="tm-section">
@@ -640,15 +648,17 @@ map.invalidateSize();
 	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
 	<script type="text/javascript" src="js/jquery.backstretch.min.js"></script>
 	<script type="text/javascript" src="slick/slick.min.js"></script> <!-- Slick Carousel -->
-	<script src="js/RequestScript.js"></script><!-- forms and request -->
+	<script src="js/RequestScripts/RequestScript.js"></script><!-- forms and request -->
+	<script src="js/RequestScripts/ProductRequest.js"></script><!-- forms and request -->
+	<script src="js/RequestScripts/UserRequest.js"></script><!-- forms and request -->
 	<script src="js/script.js"></script>
 	<script>
 		function mostrarPopup() {
-		  document.getElementById("popup").style.display = "block";
+			document.getElementById("popup").style.display = "block";
 		}
-		
+
 		function cerrarPopup() {
-		  document.getElementById("popup").style.display = "none";
+			document.getElementById("popup").style.display = "none";
 		}
 	</script>
 	<script>
@@ -826,7 +836,7 @@ map.invalidateSize();
 			$(".tm-main-nav a").removeClass("active");
 			currentNavItem.addClass("active");
 
-		
+
 			switch (currentNavItem.data().page) {
 				case '#tm-section-8':
 				case '#tm-section-2':
@@ -843,12 +853,12 @@ map.invalidateSize();
 					// Expected output: "Mangoes and papayas are $2.79 a pound."
 					break;
 				case '#loaderpage':
-				$("footer2").hide();
-				$("footer").hide();
+					$("footer2").hide();
+					$("footer").hide();
 				default:
 					$("footer").show();
 			}
-		
+
 
 
 
