@@ -852,9 +852,7 @@ map.invalidateSize();
 					$("footer").hide();
 					// Expected output: "Mangoes and papayas are $2.79 a pound."
 					break;
-				case '#loaderpage':
-					$("footer2").hide();
-					$("footer").hide();
+				
 				default:
 					$("footer").show();
 			}
@@ -863,6 +861,8 @@ map.invalidateSize();
 
 
 			console.log(currentPageID + '>>>>>>>>>>>>>>');
+
+			$(currentPageID).hide();
 			// Show current page
 			currentPageID = currentNavItem.data("page");
 			$(currentPageID).fadeIn(1000);
