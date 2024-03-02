@@ -172,7 +172,7 @@ class users
 
             $returnUsuario = json_encode($returnFields);
             return $returnUsuario;
-        } catch (\Throwable  $e) {
+        } catch (\Throwable $e) {
 
             $returnFields["status"] = 500;
             $returnFields["message"] = $e->getMessage();
