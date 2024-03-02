@@ -1179,6 +1179,7 @@ footer a { color: white; }
         background-position: center;
 }
 .products12{
+    z-index: 100;
     width: 100%;
     height: 32vh;
     position: fixed;
@@ -1249,19 +1250,18 @@ footer a { color: white; }
 .filter-product{
     position: relative;
     background-color: white;
-    height: 40vh;
+    padding: 1%;
     width: 14%;
     left: 10%;
     top: 34%;
 
 }
 .products2{
-    position: fixed;
+    position: relative;
     background-color: rgba(230, 230, 230);
-    height: 40vh;
     width: 65%;
     left: 25%;
-    top: 54%;
+    top: 3%;
 }
 .productsmmaq{
     position: fixed;
@@ -1756,7 +1756,23 @@ background: url(../img/trabaja\ con\ nostros\ 1.png);
     -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
       animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
 }
+.search-container{
+    width: 100%;
+    height: 10vh;
+}
+.search-input {
 
+    width: 95%; /* Ancho del input */
+    margin: 0.3%; /* Espaciado interno (arriba, derecha, abajo, izquierda) */
+    padding: 0.2%;
+    border: 0.5% solid #ccc; /* Borde del input */
+    border-radius: 1%; /* Bordes redondeados */
+  }
+  
+  /* Estilo para el icono de búsqueda */
+#tm-section-13{
+    overflow: auto;
+}
 @-webkit-keyframes spin {
     0%   { 
         -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
