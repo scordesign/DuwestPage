@@ -1162,7 +1162,7 @@ footer a { color: white; }
 
 .products{
     width: 100%;
-    height: 100vh;
+    height: auto;
     background-color: white;
     background-image: url(../img/fondo-7.png);
     background-repeat: no-repeat;
@@ -1680,7 +1680,83 @@ background: url(../img/trabaja\ con\ nostros\ 1.png);
         width: 100%;
         height: 50%;
         display: flow;
+    }.sidebar {
+       
+        right: 0%; 
+        width: 100%;
+        border-radius: 0%;
     }
+    #tmSideBar {
+        width: 100%; 
+        position: fixed;
+        height: 10%;
+        bottom: 0%;
+        min-height: 10%;
+        left: 0%;
+     
+    }
+    .portafolio, .comercial, .contactanos {
+        width: 80%;
+        text-align: center;
+        border: 1px solid greenyellow;
+        height: 79px;
+        background-size: 100%;
+        margin-top: 12px;
+        margin-left: 10%;
+    }
+    #searchMenu {
+        display: none;
+    }
+    
+    .sec1{
+    
+    width: 75%;
+    left: 12.5%;
+    top: 8%;
+    position: fixed;
+    padding: 2% 5%;
+    text-align: justify;
+    }
+    .sec1 p {
+        line-height: 20px;
+        font-family: 'Leomn Milk', sans-serif;
+    }
+    .sec2 {
+        
+        left: 20%;
+        width: 60%;
+        bottom: 55%;
+        
+    }
+   
+    #imgFlag img {
+       
+        display: none;
+    }
+    #whatsapp{
+        display: none;
+    }
+    #facebook{
+        display: none;
+    }
+    #instagram{
+        display: none;
+    }
+    #loader img {
+        width: 70%;
+        left: 15%;
+        top: 40%;
+    }
+    #imglogo img {
+        width: 100%;
+    }
+    #dropDownBar{
+        left: 50%;
+    width: 50%;
+    bottom: 10%;
+    border-radius: 0px;
+}
+    
 }
 
 @media (max-width: 500px), (max-width: 809px) and (min-width: 767px) {
