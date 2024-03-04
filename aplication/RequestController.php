@@ -42,6 +42,9 @@ switch (strtolower($_SERVER["REQUEST_METHOD"])) {
             case "getProducts":
                 echo $Products->getProducts();
                 break;
+            case "getProduct":
+                echo $Products->getProduct();
+                break;
         }
 
         break;

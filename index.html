@@ -65,6 +65,7 @@ http://www.tooplate.com/view/2102-constructive
 			<span id="closeModal"><i class="fas fa-window-close"></i></span>
 			<div id="formModal"></div>
 		</div>
+		<img src="img/Logo-R-Andina---Fondo-oscuro.png" alt="logo" id="modalLogo">
 	</div>
 
 
@@ -119,7 +120,7 @@ http://www.tooplate.com/view/2102-constructive
 					</li>
 					<li>
 						<a href="#company" class="scrolly" data-bg-img="fondo-suelo-blanco-vertically.png"
-							data-page="#tm-section-13" onclick="chargeProducts()">
+							data-page="#tm-section-13" onclick="chargeProducts(13)">
 							<i class="fa fa-caret-right" aria-hidden="true"></i>Portafolio nutrición especializada
 						</a>
 					</li>
@@ -520,7 +521,7 @@ map.invalidateSize();
 							<input type="hidden" name="filtersInput-13" id="filtersInput-13" value="">
 						</form>
 					</div>
-					<div class="products2">
+					<div class="products2" id="products2-13">
 						<div class=" alert alert-dark" style="width: 100%;text-align: center;">
 
 
@@ -533,6 +534,7 @@ map.invalidateSize();
 							<button id="addProduct" class="btn btn-primary adminSession hide">Agregar producto</button>
 							<button id="addFilter" class="btn btn-primary adminSession hide">Agregar filtro</button>
 						</div>
+
 						
 					</div>
 				</div>
@@ -683,6 +685,7 @@ map.invalidateSize();
 			document.getElementById("popup").style.display = "none";
 		}
 	</script>
+
 	<script>
 
 		var sidebarVisible = false;
@@ -976,6 +979,10 @@ map.invalidateSize();
 		});
 
 	</script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>

@@ -29,14 +29,17 @@ class Products
                 return $return;
             }
 
+            
+
             $filters = $_POST["filters"] === null ? "" : substr($_POST["filters"], 0, strlen($_POST["filters"]) - 1);
             $description = $_POST["description"] === null ? "" : $_POST["description"];
             $name = $_POST["name"] === null ? "" : $_POST["name"];
             $section = $_POST["section"] === null ? "" : $_POST["section"];
             $amount = $_POST["amount"] === null ? "" : $_POST["amount"];
             $imagesNamesString ="[]";
+
             if($images !== null){
-                $directoryimage = "C:/Users/andres/Documents/prueba/" . $name . "/images";
+                $directoryimage = str_replace("\aplication\controller", "", __DIR__)."/img/prueba/". $name . "/images";
                 if (!is_dir($directoryimage)) {
                     // Crear la carpeta con permisos 0777 (lectura, escritura y ejecución para todos)
                     mkdir($directoryimage, 0777, true);
@@ -49,13 +52,13 @@ class Products
                     $rutaArchivo = $directoryimage . "/" . basename($images["name"][$key]);
                     move_uploaded_file($images["tmp_name"][$key], $rutaArchivo);
                     // Agregar nombre del archivo a la lista
-                    $imagesNames[] = $directoryimage . "/" . basename($images["name"][$key]);
+                    $imagesNames[] = /*$directoryimage .*/ "img/prueba/".$name . "/images/" . basename($images["name"][$key]);
                 }
                 $imagesNamesString = json_encode($imagesNames);
             }
             $filesNamesString = "[]";
             if($files !== null){
-                $directoryFile = "C:/Users/andres/Documents/prueba/" . $name . "/files";
+                $directoryFile = str_replace("\aplication\controller", "", __DIR__)."/img/prueba/" . $name . "/files";
 
                 if (!is_dir($directoryFile)) {
                     // Crear la carpeta con permisos 0777 (lectura, escritura y ejecución para todos)
@@ -70,7 +73,7 @@ class Products
                     $rutaArchivo = $directoryFile . "/" . basename($files["name"][$key]);
                     move_uploaded_file($files["tmp_name"][$key], $rutaArchivo);
                     // Agregar nombre del archivo a la lista
-                    $filesNames[] = $directoryFile . "/" . basename($files["name"][$key]);
+                    $filesNames[] =/* $directoryFile .*/ "img/prueba/" . $name . "/files/". basename($files["name"][$key]);
                 }
 
                 $filesNamesString = json_encode($filesNames);
@@ -192,6 +195,7 @@ class Products
                 $resultadosReturnEach['name'] = $resultado['name'];
                 $resultadosReturnEach['description'] = $resultado['description'];
                 $resultadosReturnEach['amount'] = $resultado['amount'];
+                $resultadosReturnEach['id'] = $resultado['id'];
                 $resultadosReturn[$i] =  $resultadosReturnEach;
                 $i++;
             }
@@ -199,6 +203,60 @@ class Products
             $returnFields["data"] = $resultadosReturn ;
             $returnFields["Page"] = $page;
             $returnFields["Total"] = $count;
+            $returnFields["status"] = 200;
+            $returnFields["message"] = "Correcto";
+
+            $returnProduct = json_encode($returnFields);
+
+
+            return json_encode($returnProduct);
+
+        } catch (\Throwable $e) {
+            $returnFields["status"] = 500;
+            $returnFields["message"] = $e;
+            $returnProduct = json_encode($returnFields);
+
+
+            return json_encode($returnProduct);
+        }
+        // Iterar sobre el resultado
+    }
+
+    public function getProduct(): string
+    {
+        $returnFields = array();
+        try {
+            $id = !isset($_GET["id"]) ? 0 : $_GET["id"];
+            
+            $Ssql = "select * from products where id= :id";
+
+
+            $conexion = new Conexion();
+            $pdo = $conexion->obtenerConexion();
+            
+            $statement = $pdo->prepare($Ssql);
+
+                $statement->bindParam(':id', $id , PDO::PARAM_INT);
+            
+
+
+
+            $statement->execute();
+            $resultados = $statement->fetchAll(PDO::FETCH_ASSOC);
+            $resultadosReturn = array();
+
+            foreach($resultados as $resultado){
+                $resultadosReturn = array();
+                $resultadosReturn['listDocs'] = json_decode($resultado['listDocs'], true);
+                $resultadosReturn['listImg'] = json_decode($resultado['listImg'], true);
+                $resultadosReturn['name'] = $resultado['name'];
+                $resultadosReturn['description'] = $resultado['description'];
+                $resultadosReturn['amount'] = $resultado['amount'];
+                $resultadosReturn['id'] = $resultado['id'];
+            }
+
+            $returnFields["data"] = $resultadosReturn ;
+
             $returnFields["status"] = 200;
             $returnFields["message"] = "Correcto";
 

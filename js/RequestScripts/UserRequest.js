@@ -129,7 +129,6 @@ function addNewUser() {
     form.append($("<input>").attr("type", "text").attr("name", "action").attr("hidden", "hidden").attr("value", "RegiterUser"));
 
     form.append($("<button>").attr("type", "submit").text("Registar usuario"));
-    form.append($("<button>").attr("type", "button").text("Iniciar sesión").attr("id", "logging"));
 
 
     // Agregar el formulario al cuerpo del documento

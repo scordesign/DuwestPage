@@ -987,18 +987,28 @@ footer a { color: white; }
     border-radius: 2%;
     position: relative;
     width: 50%;
-    height: 80%;
+    height: 70%;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 5vh;
-    background-color: rgba(255, 255, 255, 0.719);
+    background-color: rgba(217, 217, 217, 1);
     overflow: auto;
+}
+
+#modalLogo{
+    position: relative;
+    margin-top: 8vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+    height: auto;
+    display: block;
 }
 
 #modalBackground{
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.247);
+    background-color: rgba(0, 104, 56, 0.4);
     backdrop-filter: blur(10px);
     width: 100%;
     height: 100%;
@@ -1007,7 +1017,8 @@ footer a { color: white; }
 }
 
 #closeModal{
-    float: right;
+    right: 25.5%;
+    position: fixed;
     max-height: 6%;
     padding: 1%;
     color: black;
@@ -1161,7 +1172,8 @@ footer a { color: white; }
 
 }*/
 
-.products{
+#tm-section-13{
+    padding-top: 32vh;
     width: 100%;
     height: auto;
     background-color: white;
@@ -1249,21 +1261,78 @@ footer a { color: white; }
     top: 32%;
 }
 .filter-product{
+    float: left;
     position: relative;
     background-color: white;
     padding: 1%;
     width: 14%;
     left: 10%;
     top: 34%;
+    margin-top: 2%;
+}
 
+.filter-product form .filters h4{
+    font-size: 15px;
+}
+
+.filter-product form .filters input{
+    appearance: none; /* Elimina los estilos nativos del checkbox */
+    -webkit-appearance: none; /* Para navegadores basados en Webkit */
+    -moz-appearance: none; /* Para navegadores basados en Gecko */
+
+    border-radius: 50%; /* Forma circular */
+    border: 2px solid #ccc; /* Borde del checkbox */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el checkbox */
+    width: 10%;
+    height: 2.3vh;
+    margin-right: 5%;
+}
+
+.filter-product form .filters input:checked {
+    background-color: #007bff; /* Cambia el color de fondo cuando está marcado */
+}
+.filter-product form .filters label{
+    font-size: 15px;
 }
 .products2{
+    float: right;
     position: relative;
-    background-color: rgba(230, 230, 230);
     width: 65%;
-    left: 25%;
-    top: 3%;
+    right: 10%;
+    top: 10%;
+    margin-top: 2%;
 }
+
+.divProduct{
+    cursor: pointer;
+    width: 18%;
+    height: 30vh;
+    background-color: rgba(49, 170, 71, 1);
+    margin: 1%;
+    padding: 1%;
+    border-radius: 5%;
+    float: left;
+}
+
+.divProduct div{
+    height: 60%;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+}
+
+.divProduct div img{
+height: 100%;
+}
+
+.divProduct p{
+    font-size: 15px;
+}
+
+.divProduct a{
+    font-size: 12px;
+}
+
 .productsmmaq{
     position: fixed;
     background-color: rgba(230, 230, 230);
@@ -1282,6 +1351,22 @@ footer a { color: white; }
     z-index: 1002;
     background-repeat: no-repeat;
 
+}
+
+#fatherProductModal{
+    width: 96%;
+    position: relative;
+}
+
+#fatherProductModal #myCarouselProduct{
+    max-width: 40%;
+    float: left;
+    position: relative;
+    max-height: 90%;
+}
+
+#fatherProductModal{
+margin: 5%;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Josefin+Slab|Arvo|Lato|Vollkorn|Abril+Fatface|Old+Standard+TT|Droid+Sans|Lobster|Inconsolata|Montserrat|Playfair+Display|Karla|Alegreya|Libre+Baskerville|Merriweather|Lora|Archivo+Narrow|Neuton|Signika|Questrial|Fjalla+One|Bitter|Varela+Round);
@@ -1969,6 +2054,7 @@ background: url(../img/trabaja\ con\ nostros\ 1.png);
   /* Estilo para el icono de búsqueda */
 #tm-section-13{
     overflow: auto;
+
 }
 @-webkit-keyframes spin {
     0%   { 
