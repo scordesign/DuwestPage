@@ -1173,9 +1173,9 @@ footer a { color: white; }
 }*/
 
 #tm-section-13{
+    overflow: auto;
     padding-top: 32vh;
     width: 100%;
-    height: auto;
     background-color: white;
     background-image: url(../img/fondo-7.png);
     background-repeat: no-repeat;
@@ -2052,10 +2052,7 @@ background: url(../img/trabaja\ con\ nostros\ 1.png);
   }
   
   /* Estilo para el icono de búsqueda */
-#tm-section-13{
-    overflow: auto;
 
-}
 @-webkit-keyframes spin {
     0%   { 
         -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
