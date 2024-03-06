@@ -253,6 +253,7 @@ class Products
                 $resultadosReturn['description'] = $resultado['description'];
                 $resultadosReturn['amount'] = $resultado['amount'];
                 $resultadosReturn['id'] = $resultado['id'];
+                $resultadosReturn['filters'] = $resultado['filters'];
             }
 
             $returnFields["data"] = $resultadosReturn ;

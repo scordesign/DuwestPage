@@ -52,17 +52,17 @@ $(function () {
 
                     for (var key in response.data) {
                         var divFirst = $("<div>").attr("class", "filters noClose").attr("style", "width:100%;color:black;");
-                        
+
                         if (response.data.hasOwnProperty(key)) {
                             divFirst.append($("<h4>").html(key).attr("class", "bold noClose"));
                             var objetos = response.data[key];
                             // Iterar sobre los objetos dentro de cada categoría
                             objetos.forEach(function (element) {
                                 var divData = $("<div>").attr("class", "filtersEach").attr("style", "display:inline-flex;width:50%;");
-        
-                                divData.append($("<input>").attr("type", "checkbox").attr("onclick", "filterAdd(" + element.id + ")").attr("name", element.name).attr("style", "width:20%;").attr("id", "CheckboxFilter" + element.id));
+
+                                divData.append($("<input>").attr("type", "checkbox").attr("onclick", "filterAdd(" + element.id + ")").attr("name", element.name).attr("id", "checkBox-" + element.id).attr("style", "width:20%;"));
                                 divData.append($("<label>").text(element.name).attr("styles", "width:80%;"));
-        
+
                                 divFirst.append(divData);
                             });
                             div.append(divFirst);
@@ -79,7 +79,7 @@ $(function () {
 
             form.append(div);
 
-            
+
 
             form.append($("<input>").attr("type", "text").attr("name", "filters").attr("id", "filtersInput").attr("hidden", "hidden"));
 
@@ -154,11 +154,11 @@ function getfilters(pageId) {
         success: function (response) {
             response = JSON.parse(JSON.parse(response));
             console.log(response);
-            var sectionNumber =pageId;
+            var sectionNumber = pageId;
             // var sectionNumber = pageId.substring(pageId.length - 2, pageId.length);
             for (var key in response.data) {
                 var divFirst = $("<div>").attr("class", "filters").attr("style", "width:100%;color:black;");
-                 
+
                 if (response.data.hasOwnProperty(key)) {
                     divFirst.append($("<h4>").html(key).attr("class", "bold"));
                     var objetos = response.data[key];
@@ -166,12 +166,12 @@ function getfilters(pageId) {
                     objetos.forEach(function (element) {
                         var divData = $("<div>").attr("class", "filtersEach").attr("style", "display:inline-flex;width:100%;");
 
-                        divData.append($("<input>").attr("type", "checkbox").attr("onclick", "filterAddProducts(" + element.id + ","+sectionNumber+")").attr("name", element.name).attr("id", "CheckboxFilter"+ sectionNumber +"-"+ element.id));
+                        divData.append($("<input>").attr("data", key).attr("type", "checkbox").attr("onclick", "filterAddProducts(" + element.id + "," + sectionNumber + ")").attr("name", element.name).attr("id", "CheckboxFilter" + sectionNumber + "-" + element.id));
                         divData.append($("<label>").text(element.name).attr("styles", "width:80%;"));
 
                         divFirst.append(divData);
                     });
-                    $("#filter-product-"+sectionNumber).append(divFirst);
+                    $("#filter-product-" + sectionNumber).append(divFirst);
                 }
             }
 
@@ -197,11 +197,11 @@ function filterAdd(id) {
     }
 }
 
-function filterAddProducts(id,section) {
-    if ($('#CheckboxFilter'+section+"-" + id).prop('checked')) {
-        $("#filtersInput-"+section).val($("#filtersInput-"+section).val() + "{" + id + "},");
+function filterAddProducts(id, section) {
+    if ($('#CheckboxFilter' + section + "-" + id).prop('checked')) {
+        $("#filtersInput-" + section).val($("#filtersInput-" + section).val() + "{" + id + "},");
     } else {
-        $("#filtersInput-"+section).val($("#filtersInput-"+section).val().replace("{" + id + "},", ""));
+        $("#filtersInput-" + section).val($("#filtersInput-" + section).val().replace("{" + id + "},", ""));
     }
 }
 
@@ -214,19 +214,19 @@ function getProducts(section) {
             //console.log(response.replace(/\\/g, ''));
             response = JSON.parse(JSON.parse(response));
             response.data.forEach(element => {
-                var divFather =  $("<div>").attr("class", "divProduct").attr("onclick","getProduct("+ element.id+")" );
+                var divFather = $("<div>").attr("class", "divProduct").attr("onclick", "getProduct(" + element.id + ")");
 
-                var divSon =  $("<div>");
-                divSon.append($("<img>").attr("src", element.listImg.length == 0 ?"": element.listImg[0] ));
+                var divSon = $("<div>");
+                divSon.append($("<img>").attr("src", element.listImg.length == 0 ? "" : element.listImg[0]));
                 divFather.append(divSon);
-                divFather.append($("<p>").html(element.name + ", "+element.amount));
+                divFather.append($("<p>").html(element.name + ", " + element.amount));
 
                 divFather.append($("<a>").html("Ver más información"));
 
-                $("#products2-"+section).append(divFather);
+                $("#products2-" + section).append(divFather);
             });
-            console.log($("#products2-"+section));
-            console.log("#products2-"+section);
+            console.log($("#products2-" + section));
+            console.log("#products2-" + section);
         },
         error: function (xhr, status, error) {
             // Manejar errores
@@ -236,8 +236,9 @@ function getProducts(section) {
 }
 
 function getProduct(id) {
+    var section = currentPageID.substring(currentPageID.length - 2, currentPageID.length);
     $.ajax({
-        url: "aplication/RequestController.php?action=getProduct&id="+id, // Archivo PHP que contiene la función
+        url: "aplication/RequestController.php?action=getProduct&id=" + id, // Archivo PHP que contiene la función
         type: "GET", // Método de solicitud
         success: function (response) {
             //console.log(response.replace(/\\/g, ''));
@@ -247,18 +248,18 @@ function getProduct(id) {
             $("#formModal").html("");
 
             $("#modalBackground").toggleClass("hide");
-           
-
-            var div = $("<div>").attr("id", "fatherProductModal").addClass("noClose"); 
-            var divCarrusel = $("<div>").attr("id", "myCarouselProduct").attr("class", "carousel slide").attr("data-ride", "carousel").addClass("noClose"); 
 
 
-            var divCarruselinner =  $("<div>").attr("class", "carousel-inner").addClass("noClose");
+            var div = $("<div>").attr("id", "fatherProductModal").addClass("noClose");
+            var divCarrusel = $("<div>").attr("id", "myCarouselProduct").attr("class", "carousel slide").attr("data-ride", "carousel").addClass("noClose");
 
-            var i=0;
+
+            var divCarruselinner = $("<div>").attr("class", "carousel-inner").addClass("noClose");
+
+            var i = 0;
             response.data.listImg.forEach(element => {
-                var divCarruselinnerItem = $("<div>").attr("class", "carousel-item "+ ( i == 0? "active" : "" )).attr("id", "carousel-item"+i).addClass("noClose");
-                divCarruselinnerItem.append($("<img>").attr("class", "d-block w-100").attr("src", element ).attr("alt", "imagen "+ i ).addClass("noClose") );
+                var divCarruselinnerItem = $("<div>").attr("class", "carousel-item " + (i == 0 ? "active" : "")).attr("id", "carousel-item" + i).addClass("noClose");
+                divCarruselinnerItem.append($("<img>").attr("class", "d-block w-100").attr("src", element).attr("alt", "imagen " + i).addClass("noClose"));
                 divCarruselinner.append(divCarruselinnerItem);
                 i++;
             });
@@ -274,11 +275,25 @@ function getProduct(id) {
             divCarrusel.append(aCarruselPrev);
             divCarrusel.append(aCarruselNext);
 
-            var divInfo = $("<div>").attr("id", "infoProduct").addClass("noClose"); 
+            // info
+            var divInfo = $("<div>").attr("id", "infoProduct").addClass("noClose");
+            divInfo.append($("<h5>").addClass("noClose").html(response.name));
+            divInfo.append($("<p>").addClass("noClose").html(response.description).attr("id", "infoProductDesc"));
 
-
+            var filtersProduct = "";
+            i = 0;
+            console.log(response.data.filters.replaceAll("{", "").replaceAll("}", ""));
+            (response.data.filters.replaceAll("{", "").replaceAll("}", "").split(",")).forEach(element => {
+                var filtersProductElement = $("#CheckboxFilter" + section + "-" + element);
+                if (filtersProduct.includes(filtersProductElement.attr("data"))) {
+                    filtersProduct =  filtersProduct.substring(0, (filtersProduct.indexOf(filtersProductElement.attr("data")) + filtersProductElement.attr("data").length + 1) )+ " " + filtersProductElement.attr("name") +"," + filtersProduct.substring( (filtersProduct.indexOf(filtersProductElement.attr("data")) + filtersProductElement.attr("data").length + 1 +filtersProductElement.attr("name").length+2) , filtersProduct.length );
+                } else {
+                    filtersProduct += +" "+filtersProductElement.attr("data") + ": " + filtersProductElement.attr("name");
+                }
+            });
+            console.log(filtersProduct);
             div.append(divCarrusel);
-            
+
 
             $("#formModal").append(div);
         },
@@ -290,19 +305,19 @@ function getProduct(id) {
 }
 
 function nextProductIMg(currentImg) {
-    var nextPage =  $(".carousel-item").length-1 < (currentImg+1) ?0: (currentImg+1) ;
+    var nextPage = $(".carousel-item").length - 1 < (currentImg + 1) ? 0 : (currentImg + 1);
     $(".carousel-item").removeClass("active");
-    $("#carousel-item"+nextPage).addClass("active");
+    $("#carousel-item" + nextPage).addClass("active");
     $("#carousel-control-next").removeAttr("onclick");
-    $("#carousel-control-next").attr("onclick", "nextProductIMg("+nextPage+")");
+    $("#carousel-control-next").attr("onclick", "nextProductIMg(" + nextPage + ")");
 }
 
 function prevProductIMg(currentImg) {
-    var nextPage =  0 > (currentImg-1) ? ($(".carousel-item").length-1) : (currentImg-1) ;
+    var nextPage = 0 > (currentImg - 1) ? ($(".carousel-item").length - 1) : (currentImg - 1);
     $(".carousel-item").removeClass("active");
-    $("#carousel-item"+nextPage).addClass("active");
+    $("#carousel-item" + nextPage).addClass("active");
     $("#carousel-control-prev").removeAttr("onclick");
-    $("#carousel-control-prev").attr("onclick", "prevProductIMg("+nextPage+")");
+    $("#carousel-control-prev").attr("onclick", "prevProductIMg(" + nextPage + ")");
 
 }
 
