@@ -26,8 +26,10 @@ function getSessionDefault() {
         success: function (response) {
 
             if(response !== "[]" && response !== ""){
+                localStorage.setItem("session","1")
                 $('.adminSession').removeClass("hide");
             }else{
+                localStorage.setItem("session","0")
                 $('.adminSession').addClass("hide");
             }
         },

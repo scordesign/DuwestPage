@@ -508,7 +508,7 @@ map.invalidateSize();
 			</section>
 
 			<!-- section 13 -->
-			<section id="tm-section-13" class="tm-section">
+			<section id="tm-section-13" onscroll="pagination(1)" class="tm-section">
 				<div class="products">
 					<div class="products12">
 						<div class="title-product">
@@ -518,24 +518,23 @@ map.invalidateSize();
 					<div class="logo-supliers"></div>
 					<div class="filter-product">
 						<form action="" id="filter-product-13">
-							<input type="hidden" name="filtersInput-13" id="filtersInput-13" value="">
+							
 						</form>
 					</div>
 					<div class="products2" id="products2-13">
-						<div class=" alert alert-dark" style="width: 100%;text-align: center;">
+						<div class="functionPrducts" >
 
 
-							<div class="search-container"><input type="search" class="search-input" id="search-13"
+							<!-- <div class="search-container"><input type="search" class="search-input" id="search-13"
 									placeholder="Buscar...">
 								<i class="fa fa-search search-icon icon-Search"></i>
-							</div>
+							</div> -->
 
 
 							<button id="addProduct" class="btn btn-primary adminSession hide">Agregar producto</button>
 							<button id="addFilter" class="btn btn-primary adminSession hide">Agregar filtro</button>
 						</div>
 
-						
 					</div>
 				</div>
 			</section>
@@ -685,7 +684,6 @@ map.invalidateSize();
 			document.getElementById("popup").style.display = "none";
 		}
 	</script>
-
 	<script>
 
 		var sidebarVisible = false;
