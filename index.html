@@ -114,7 +114,7 @@ http://www.tooplate.com/view/2102-constructive
 					<li>
 						<a href="#products" id="tmNavLink2" class="scrolly"
 							data-bg-img="fondo-suelo-blanco-vertically.png" data-page="#tm-section-12"
-							data-page-type="carousel">
+							onclick="chargeProducts(12)" data-page-type="carousel">
 							<i class="fa fa-caret-right" aria-hidden="true"></i>Portafolio protección de cultivos.
 						</a>
 					</li>
@@ -126,13 +126,13 @@ http://www.tooplate.com/view/2102-constructive
 					</li>
 					<li>
 						<a href="#contact" class="scrolly" data-bg-img="fondo-suelo-blanco-vertically.png"
-							data-page="#tm-section-15">
+							data-page="#tm-section-15" onclick="chargeProductsNoF(15)" >
 							<i class="fa fa-caret-right" aria-hidden="true"></i>Maquinaria y equipos
 						</a>
 					</li>
 					<li>
 						<a href="#contact" class="scrolly" data-bg-img="fondo-suelo-blanco-vertically.png"
-							data-page="#tm-section-14">
+							data-page="#tm-section-14"  onclick="chargeProductsNoF(14)" >
 							<i class="fa fa-caret-right" aria-hidden="true"></i>Semillas de pastos
 						</a>
 					</li>
@@ -494,7 +494,7 @@ map.invalidateSize();
   </script>-->
 
 			<!-- section 12 -->
-			<section id="tm-section-12" class="tm-section">
+			<section id="tm-section-12" onscroll="pagination()"  class="tm-section">
 				<div class="products">
 					<div class="products1">
 						<div class="title-product">
@@ -502,13 +502,29 @@ map.invalidateSize();
 						</div>
 					</div>
 					<div class="logo-supliers"></div>
-					<div class="filter-product"></div>
-					<div class="products2"></div>
+					<div class="filter-product">
+						<form action="" id="filter-product-12">
+							
+						</form>
+					</div>
+					<div class="products2" id="products2-12">
+						<div class="functionPrducts" >
+
+
+							<!-- <div class="search-container"><input type="search" class="search-input" id="search-13"
+									placeholder="Buscar...">
+								<i class="fa fa-search search-icon icon-Search"></i>
+							</div> -->
+							<button id="addProduct" class="btn btn-primary adminSession hide">Agregar producto</button>
+							<button id="addFilter" class="btn btn-primary adminSession hide">Agregar filtro</button>
+						</div>
+
+					</div>
 				</div>
 			</section>
 
 			<!-- section 13 -->
-			<section id="tm-section-13" onscroll="pagination(1)" class="tm-section">
+			<section id="tm-section-13" onscroll="pagination()" class="tm-section">
 				<div class="products">
 					<div class="products12">
 						<div class="title-product">
@@ -526,11 +542,9 @@ map.invalidateSize();
 
 
 							<!-- <div class="search-container"><input type="search" class="search-input" id="search-13"
-									placeholder="Buscar...">
+									placeho lder="Buscar...">
 								<i class="fa fa-search search-icon icon-Search"></i>
 							</div> -->
-
-
 							<button id="addProduct" class="btn btn-primary adminSession hide">Agregar producto</button>
 							<button id="addFilter" class="btn btn-primary adminSession hide">Agregar filtro</button>
 						</div>
@@ -550,7 +564,19 @@ map.invalidateSize();
 
 					</div>
 
-					<div class="productsmmaq"></div>
+					<div class="productsmmaq"  id="products2-14">
+						<div class="functionPrducts" >
+
+
+							<!-- <div class="search-container"><input type="search" class="search-input" id="search-13"
+									placeho lder="Buscar...">
+								<i class="fa fa-search search-icon icon-Search"></i>
+							</div> -->
+							<button id="addProduct" class="btn btn-primary adminSession hide">Agregar producto</button>
+							<button id="addFilter" class="btn btn-primary adminSession hide">Agregar filtro</button>
+						</div>
+
+					</div>
 				</div>
 			</section>
 

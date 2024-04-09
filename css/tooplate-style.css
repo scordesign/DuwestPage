@@ -1309,7 +1309,18 @@ footer a {
 
 }*/
 
-#tm-section-13 {
+
+/* #tm-section-13 {
+    overflow: auto;
+    padding-top: 32vh;
+    width: 100%;
+    background-color: white;
+    background-image: url(../img/fondo-7.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+#tm-section-12 ,#tm-section-13 , #tm-section-14 ,#tm-section-15 {
     overflow: auto;
     padding-top: 32vh;
     width: 100%;
@@ -1320,6 +1331,7 @@ footer a {
 }
 
 .products1 {
+    z-index: 100; 
     width: 100%;
     height: 32vh;
     position: fixed;
@@ -1331,7 +1343,7 @@ footer a {
 }
 
 .products12 {
-    z-index: 100;
+    z-index: 100; 
     width: 100%;
     height: 32vh;
     position: fixed;
@@ -1343,6 +1355,7 @@ footer a {
 }
 
 .products13 {
+    z-index: 100; 
     width: 100%;
     height: 32vh;
     position: fixed;
@@ -1354,6 +1367,7 @@ footer a {
 }
 
 .products14 {
+    z-index: 100; 
     width: 100%;
     height: 32vh;
     position: fixed;
@@ -1489,18 +1503,22 @@ footer a {
 }
 
 .productsmmaq {
+    overflow: auto;
     position: fixed;
-    background-color: rgba(230, 230, 230);
-    height: 60vh;
-    width: 80%;
-    left: 10%;
-    top: 34%;
+    height: 40vh;
+    padding: 1% 14%;
+    width: 100%;
+    left: 0%;
+    top: 32%;
+    
 }
 
 .banner-mavuno {
     position: absolute;
-    bottom: 2%;
+    bottom: 0.8%;
     background-image: url(../img/banner\ mavuno.png);
+    background-size: contain;
+    background-position: center;
     width: 100%;
     background-size: 100%;
     height: 30%;
