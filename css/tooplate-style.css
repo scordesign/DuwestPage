@@ -509,6 +509,9 @@ address {
     margin-top: 12px;
 
 }
+#whatsapp{
+    display: none;
+}
 
 .portafolio {
     margin-left: 5%;
@@ -849,6 +852,9 @@ footer a {
     border: groove;
 
 }
+#nuestromovil img {
+    display: none;
+}
 
 .vision-general {
     position: fixed;
@@ -1039,6 +1045,12 @@ footer a {
     font-family: 'Centuri Gothic', sans-serif;
 
 
+}
+#whatsapp {
+    display: none;
+}
+#nuestromovil{
+    display: none;
 }
 
 .popup-content h4 {
@@ -2085,11 +2097,27 @@ text.dummy-text {
         margin-left: 10%;
         border-radius: 10px;
     }
+    #whatsapp{
+        width: 80%;
+        text-align: center;
+        border: 1px solid greenyellow;
+        height: 79px;
+        background-size: 100%;
+        margin-top: 12px;
+        margin-left: 10%;
+        border-radius: 10px;
+    }
 
     .portafolio img,
     .comercial img,
     .contactanos img{
        display: none;
+    }
+    #whatsapp img{
+        display: none;
+    } 
+    #nuestro{
+        display: none;
     }
 
     .tm-main-nav {
@@ -2132,7 +2160,7 @@ text.dummy-text {
     }
 
     #whatsapp {
-        display: none;
+        display: flex;
     }
 
     #facebook {
