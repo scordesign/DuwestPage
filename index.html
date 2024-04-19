@@ -162,6 +162,7 @@ http://www.tooplate.com/view/2102-constructive
 				</ul>
 			</nav>
 		</div>
+		
 
 		<div class="tm-content" style="height: 100vh;">
 
@@ -501,7 +502,22 @@ map.invalidateSize();
 							&nbsp;protección de cultivos&nbsp;
 						</div>
 					</div>
-					<div class="logo-supliers"></div>
+					<div class="logo-supliers">
+						<img src="img/corteva.png">
+						<img src="img/valagro.png">
+						<img src="img/fmc.png">
+						<img src="img/sumitomo.png">
+						<img src="img/gowan.png">
+						<img src="img/prorice.png">
+						<img src="img/first.png">
+						<img src="img/celagri.png">
+						<img src="img/sineria.png">
+						<img src="img/helm.png">
+						<img src="img/bioserviam.png">
+						<img src="img/westrade.png">
+
+
+					</div>
 					<div class="filter-product">
 						<form action="" id="filter-product-12">
 							
@@ -531,8 +547,23 @@ map.invalidateSize();
 							&nbsp;nutrición especializada&nbsp;
 						</div>
 					</div>
-					<div class="logo-supliers"></div>
-					<div class="filter-product">
+					<div class="logo-supliers">
+						<img src="img/corteva.png">
+						<img src="img/valagro.png">
+						<img src="img/fmc.png">
+						<img src="img/sumitomo.png">
+						<img src="img/gowan.png">
+						<img src="img/prorice.png">
+						<img src="img/first.png">
+						<img src="img/celagri.png">
+						<img src="img/sineria.png">
+						<img src="img/helm.png">
+						<img src="img/bioserviam.png">
+						<img src="img/westrade.png">
+
+
+					</div>
+										<div class="filter-product">
 						<form action="" id="filter-product-13">
 							
 						</form>
@@ -561,6 +592,12 @@ map.invalidateSize();
 						<div class="title-product">
 							&nbsp;semillas de pastos&nbsp;
 						</div>
+						
+					</div>
+					<div class="logo-supliers1">
+						<img src="img/wolf.png">
+					
+
 
 					</div>
 
@@ -586,8 +623,15 @@ map.invalidateSize();
 						<div class="title-product">
 							&nbsp;maquinaria y equipos&nbsp;
 						</div>
+						
 					</div>
+					<div class="logo-supliers2">
+						<img src="img/matabi.png">
+						<img src="img/xag.png">
+						
 
+
+					</div>
 					<div class="products15 productsmmaq" onscroll="pagination14()" id="products2-15">
 						<div class="functionPrducts" >
 
@@ -670,7 +714,8 @@ map.invalidateSize();
 					<a href="#products" class="scrolly" data-bg-img="constructive_bg_02.jpg" data-page="#tm-section-2"
 						data-page-type="carousel">
 						<img src="img/Boton-nuestro-p.png"id="nuestro"></a>
-						<img src="img/rednacionalcel.png"id="nuestromovil"></a>
+						<img src="img/rednacionalcel.png"id="nuestromovil"class="whocel"></a>
+						<h4 id="nuestromovil"class="texcel">NUESTRO PORTAFOLIO</h4>
 
 				</nav>
 			</div>
@@ -680,7 +725,10 @@ map.invalidateSize();
 					<a href="#products" class="scrolly" data-bg-img="constructive_bg_02.jpg" data-page="#tm-section-11"
 						data-page-type="carousel">
 						<img src="img/Boton-red-N.png"id="nuestro"></a>
-						<img src="img/ubicacioncel.png"id="nuestromovil"></a>
+						<img src="img/ubicacioncel.png"id="nuestromovil"class="whocel"></a>
+						<h4 id="nuestromovil"class="texcel">RED NACIONAL COMERCIAL</h4>
+
+
 
 				</nav>
 			</div>
@@ -689,7 +737,9 @@ map.invalidateSize();
 					<a href="#products" class="scrolly" data-bg-img="constructive_bg_02.jpg" data-page="#tm-section-11"
 						data-page-type="carousel">
 						<img src="img/Boton-contactanos.png"id="nuestro"></a>
-						<img src="img/Boton-nuestro-p.png"id="nuestromovil"></a>
+						<img src="img/quienessomoscel.png"id="nuestromovil"class="whocel"></a>
+						<h4 id="nuestromovil"class="texcel">QUIENES SOMOS?</h4>
+
 
 				</nav>
 			</div>
@@ -698,7 +748,9 @@ map.invalidateSize();
 					<a href="#products" class="scrolly" data-bg-img="constructive_bg_02.jpg" data-page="#tm-section-11"
 						data-page-type="carousel">
 						<img src="img/Boton-contactanos.png"id="nuestro" ></a>
-						<img src="img/Boton-nuestro-p.png"id="nuestromovil"></a>
+						<img src="img/whatsappcel.png"id="nuestromovil"class="whocel"></a>
+						<h4 id="nuestromovil"class="texcel">ALGUNA PREGUNTA? CONTACTANOS</h4>
+
 
 				</nav>
 			</div>
@@ -776,8 +828,12 @@ map.invalidateSize();
 					});
 				}
 			});
+			function esMovil() {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
 
 			function ajustarNav() {
+				if (!esMovil()) {
 				var posicionTmMainNav = $("#TmMainNav").offset();
 				var posicionImgFlag = $("#imgFlag").offset();
 				var posicionMenuBars = $("#TmMainNav").offset();
@@ -806,7 +862,7 @@ map.invalidateSize();
 				});
 
 
-
+			}
 			}
 
 			// Ejecutar la función al cargar la página
