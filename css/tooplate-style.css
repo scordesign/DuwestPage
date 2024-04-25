@@ -901,7 +901,12 @@ footer a {
     width: fit-content;
     left: 70%;
 }
-
+.parrafo-vision h4 {
+    display: none;
+}
+.parrafo-mision h4 {
+    display: none;
+}
 .vision {
     backdrop-filter: blur(10px);
     position: relative;
@@ -2232,6 +2237,7 @@ text.dummy-text {
 
     #imgFlag img{
         display: block;
+        height: 3vh;
         }
     #searchMenu {
 
@@ -2435,6 +2441,146 @@ text.dummy-text {
         width: 100%;
         text-align: center;
     }
+    .workUs {
+    
+    bottom: 44%;
+    left: 10%;
+    width: 80%;
+}
+.workUsdv-2 {
+    
+    display: flex;
+    flex-direction: column-reverse;
+}
+.bgWorkUs {
+    width: 100%;
+    height: 33.333%;
+    position: relative;
+    float: left;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+.workUsdv-1 {
+    height: 100%;
+    position: relative;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0.2%;
+    border-radius: 1em;
+    background-image: url(../img/fondoTrabacaNosotros.png);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: blur(4px);
+    margin-top: 12%;
+}
+.workUsdv-2 div {
+    float: right;
+    width: 80%;
+    height: 6%;
+    margin-top: 5.5%;
+    border-radius: 1em;
+    backdrop-filter: blur(4px);
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 17%;
+    padding-top: 2%;
+    letter-spacing: 0.1em;
+}
+.workUsdv-2 img {
+    height: 10%;
+    width: 20%;
+    left: 40%;
+    position: fixed;
+    top: 10%;
+}
+.workUsdv-1 h4{
+    text-transform: capitalize;
+    font-size: 100%;
+    font-weight: lighter;
+}
+.workUsdv-1 p{
+    text-transform: capitalize;
+    font-size: 65%;
+}
+.mision{
+    bottom: -64%;
+}
+.title-vision {
+    top: 8%;
+    text-align: center;
+}
+.tm-section10{
+    overflow: scroll;
+    overflow-y: scroll;
+}
+.parrafo-vision {
+    position: fixed;
+    top: 47%;
+    background-color: rgba(73, 71, 69, 0.6);
+    color: white;
+    height: auto;
+    background-image: url(../img/fondo-suelo-blanco.png);
+    font-size: medium;
+    border-radius: 12px;
+    font-family: 'Lemon/Milk light', sans-serif;
+    font-size: 5px;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 2%;
+    width: 80%;
+}
+.vision {
+   display: none;
+}
+
+.mision1 {
+  display: none;
+}
+.parrafo-mision h4{
+    display: block;
+    text-align: center;
+}
+.parrafo-vision h4{
+    display: block;
+    text-align: center;
+}
+.parrafo-mision {
+    position: fixed;
+    top: 20%;
+    left: 10%;
+    background-color: rgba(73, 71, 69, 0.6);
+    color: white;
+    height: auto;
+    background-image: url(../img/fondo-suelo-blanco.png);
+    font-size: medium;
+    border-radius: 12px;
+    font-family: 'Lemon/Milk light', sans-serif;
+    font-size: 5px;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 2%;
+    width: 80%;
+}
+
+.politica {
+    top: 77%;
+    position: fixed;
+    left: 10%;
+    width: 80%;
+    line-height: 1px;
+    height: auto;
+}
+.politica a{
+    padding-bottom: 2.5%;
+    margin: 2px 1px 5px 1px;
+    margin-top: 0%;
+    padding-top: 2.5%;
+    text-decoration: underline;
+    
+}
+
 
 }
 
