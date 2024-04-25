@@ -2145,7 +2145,7 @@ text.dummy-text {
         width: 80%;
         text-align: center;
         border: 1px solid greenyellow;
-        height: 79px;
+        height: 15%;
         background-size: 100%;
         margin-top: 12px;
         margin-left: 10%;
@@ -2157,7 +2157,7 @@ text.dummy-text {
         width: 80%;
         text-align: center;
         border: 1px solid greenyellow;
-        height: 79px;
+        height: 15%;
         background-size: 100%;
         margin-top: 12px;
         margin-left: 10%;
@@ -2166,27 +2166,27 @@ text.dummy-text {
     }
 
     .portafolio img{
-        width: 15%;
+        width: 10%;
     position: fixed;
-    top: 52%;
+    top: 52.7%;
     left: 15%;
     }
     .comercial img{
-        width: 12%;
+        width: 8%;
     position: fixed;
-    top: 62%;
+    top: 61.7%;
     left: 15%;
     }
     .contactanos img{
-        width: 15%;
+        width: 10%;
     position: fixed;
-    top: 72%;
+    top: 70.7%;
     left: 15%;
     }
     .whatsapp img{
-        width: 15%;
+        width: 10%;
     position: fixed;
-    top: 82%;
+    top: 79.7%;
     left: 15%;
     } 
     .texcel{
@@ -2206,6 +2206,8 @@ text.dummy-text {
         display: flex;
         justify-content: space-between;
         /* position: relative; */
+        font-size: 80%;
+        text-align: center;
 
     }
 
@@ -2415,7 +2417,7 @@ text.dummy-text {
     }
 
     .img-conocenos {
-        display: flow;
+        /* display: flow; */
         align-items: center;
         width: 90%;
         top: 30%;
