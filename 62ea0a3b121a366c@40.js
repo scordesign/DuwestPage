@@ -258,7 +258,7 @@ function _map(d3,colombiaGeoJSON)
 
 
 function _colombiaGeoJSON(d3){return(
-d3.json("https://gist.githubusercontent.com/john-guerra/43c7656821069d00dcbc/raw/3aadedf47badbdac823b00dbe259f6bc6d9e1899/colombia.geo.json")
+d3.json("https://raw.githubusercontent.com/scordesign/DuwestPage/main/colombia.geo.json")
 )}
 
 function _4(html){return(
