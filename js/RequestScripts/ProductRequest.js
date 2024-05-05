@@ -625,7 +625,7 @@ function getProductForDelete(id) {
                 form.append($("<input>").attr("type", "text").attr("name", "action").attr("hidden", "hidden").attr("value", "deleteProducts"));
 
 
-                form.append($("<button>").attr("type", "submit").text("Editar producto").attr("id", "deleteProducts"));
+                form.append($("<button>").attr("type", "submit").text("Eliminar producto").attr("id", "deleteProducts"));
 
 
                 // Agregar el formulario al cuerpo del documento

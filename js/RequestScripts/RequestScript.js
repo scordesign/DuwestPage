@@ -4,18 +4,26 @@ $(document).ready(function () {
 
 
     $("#closeModal").on("click", function () {
+
         $("#modalBackground").toggleClass("hide");
     });
 
     $("body").on("click", function (event) {
         var user = $(event.target).is("#user-add") || $(event.target).is(".fa-user");
-        var modal =$(event.target).is(".noClose")|| $(event.target).is(".filtersEach") || $(event.target).is("textarea") || $(event.target).is("#modal") || $(event.target).is("#formModal") || $(event.target).is("label") || $(event.target).is("input") || $(event.target).is("#miFormulario") || $(event.target).is("button") || $(event.target).is("i");
+        var modal =$(event.target).is(".noClose")|| $(event.target).is(".filtersEach") || $(event.target).is("textarea") || $(event.target).is("#modal") || $(event.target).is("#modalNotice") || $(event.target).is("#formModal") || $(event.target).is("#formModalNotice") || $(event.target).is("label") || $(event.target).is("input") || $(event.target).is("#miFormulario") || $(event.target).is("button") || $(event.target).is("i");
 
         if (!modal && !$("#modalBackground").hasClass("hide") && !user) {
             $("#modalBackground").toggleClass("hide");
         }
+
+        if (!modal && !$("#modalBackgroundNotice").hasClass("hide") && !user) {
+            $("#modalBackgroundNotice").toggleClass("hide");
+        }
     });
 
+    $("#closeModalNotice").on("click", function () {
+        $("#modalBackgroundNotice").toggleClass("hide");
+    });
 
 });
 

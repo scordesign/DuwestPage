@@ -4,12 +4,14 @@ require_once('controller/ProductsController.php');
 require_once('controller/UserController.php');
 require_once('controller/FilterController.php');
 require_once('controller/sessionController.php');
+require_once('controller/NewsController.php');
 
 require_once('connection/Connection.php');
 
 
 $users = new users();
 $Products = new Products();
+$news = new News();
 $Filters = new Filters();
 $session = new session();
 
@@ -35,6 +37,18 @@ switch (strtolower($_SERVER["REQUEST_METHOD"])) {
             case "deleteProducts":
                 echo $Products->deleteProducts();
                 break;
+            case "addNews":
+                echo $news->addNews();
+                break;
+            case "deleteImg":
+                echo $news->deleteImg();
+                break;
+            case "editNews":
+                echo $news->editNew();
+                break;
+            case "deleteNews":
+                echo $news->deleteNews();
+                break;
         }
         break;
     case "get":
@@ -53,6 +67,12 @@ switch (strtolower($_SERVER["REQUEST_METHOD"])) {
                 break;
             case "getProduct":
                 echo $Products->getProduct();
+                break;
+            case "getNews":
+                echo $news->getnews();
+                break;
+            case "getNew":
+                echo $news->getNew();
                 break;
         }
 
