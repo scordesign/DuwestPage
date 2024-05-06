@@ -67,7 +67,14 @@ http://www.tooplate.com/view/2102-constructive
 		</div>
 		<img src="img/Logo-R-Andina---Fondo-oscuro.png" alt="logo" id="modalLogo">
 	</div>
-
+	<!-- modal -->
+	<div class="modalBackgroundNotice hide" id="modalBackgroundNotice">
+		<div class="modalNotice" id="modalNotice">
+			<span id="closeModalNotice"><i class="far fa-times-circle"></i></span>
+			<div id="formModalNotice"></div>
+		</div>
+		<img src="img/Logo-R-Andina---Fondo-oscuro.png" alt="logo" id="modalLogoNotice">
+	</div>
 
 
 	<!-- Page Content -->
@@ -85,11 +92,11 @@ http://www.tooplate.com/view/2102-constructive
 
 			</span>
 			<span id="imgFlag"> <img src="img/Bandera-col.png"> </span>
-			<span><i class="fa fa-search"id="busqueda"></i> </span>
+			<span><i class="fa fa-search" id="busqueda"></i> </span>
 			<span><input type="search" name="search" id="searchMenu"></span>
-			<span><i class="fab fa-whatsapp"id="whatsapp"></i></span>
-			<span><i class="fab fa-facebook-f"id="facebook"></i></span>
-			<span><i class="fab fa-instagram"id="instagram"></i></span>
+			<span><i class="fab fa-whatsapp" id="whatsapp"></i></span>
+			<span><i class="fab fa-facebook-f" id="facebook"></i></span>
+			<span><i class="fab fa-instagram" id="instagram"></i></span>
 			<span id="user-add"><i class="far fa-user"></i></span>
 			<span id="bars-menu"><i id="TmMainNav" class="fas fa-bars"></i></span>
 
@@ -126,19 +133,19 @@ http://www.tooplate.com/view/2102-constructive
 					</li>
 					<li>
 						<a href="#contact" class="scrolly" data-bg-img="fondo-suelo-blanco-vertically.png"
-							data-page="#tm-section-15" onclick="chargeProductsNoF(15)" >
+							data-page="#tm-section-15" onclick="chargeProductsNoF(15)">
 							<i class="fa fa-caret-right" aria-hidden="true"></i>Maquinaria y equipos
 						</a>
 					</li>
 					<li>
 						<a href="#contact" class="scrolly" data-bg-img="fondo-suelo-blanco-vertically.png"
-							data-page="#tm-section-14"  onclick="chargeProductsNoF(14)" >
+							data-page="#tm-section-14" onclick="chargeProductsNoF(14)">
 							<i class="fa fa-caret-right" aria-hidden="true"></i>Semillas de pastos
 						</a>
 					</li>
 					<li>
 						<a href="#contact" class="scrolly" data-bg-img="fondo-suelo-blanco-vertically.png"
-							data-page="#tm-section-16">
+							data-page="#tm-section-16" onclick="chargeNews()">
 							<i class="fa fa-caret-right" aria-hidden="true"></i>Novedades y lanzamientos
 						</a>
 					</li>
@@ -162,7 +169,7 @@ http://www.tooplate.com/view/2102-constructive
 				</ul>
 			</nav>
 		</div>
-		
+
 
 		<div class="tm-content" style="height: 100vh;">
 
@@ -373,7 +380,7 @@ http://www.tooplate.com/view/2102-constructive
 							<h3>&nbsp;&nbsp;Visión&nbsp;&nbsp;</h3>
 						</div>
 						<div class="parrafo-vision">
-                            <h4>Visión</h4>
+							<h4>Visión</h4>
 							<br>
 							<p>Somos reconocidos por nuestros clientes y proveedores como la primera opción en aquellos
 								mercados en donde participamos,
@@ -385,7 +392,7 @@ http://www.tooplate.com/view/2102-constructive
 							<h3>&nbsp;&nbsp;Misión&nbsp;&nbsp;</h3>
 						</div>
 						<div class="parrafo-mision">
-                            <h4>Misión</h4>
+							<h4>Misión</h4>
 							<br>
 							<p>Proveer soluciones, desarrollando relaciones a largo plazo con nuestros clientes,
 								colaboradores y accionistas;
@@ -497,7 +504,7 @@ map.invalidateSize();
   </script>-->
 
 			<!-- section 12 -->
-			<section id="tm-section-12" onscroll="pagination()"  class="tm-section">
+			<section id="tm-section-12" onscroll="pagination()" class="tm-section">
 				<div class="products">
 					<div class="products1">
 						<div class="title-product">
@@ -522,18 +529,19 @@ map.invalidateSize();
 					</div>
 					<div class="filter-product">
 						<form action="" id="filter-product-12">
-							
+
 						</form>
 					</div>
 					<div class="products2" id="products2-12">
-						<div class="functionPrducts" >
+						<div class="functionPrducts">
 
 
 							<!-- <div class="search-container"><input type="search" class="search-input" id="search-13"
 									placeholder="Buscar...">
 								<i class="fa fa-search search-icon icon-Search"></i>
 							</div> -->
-							<button id="addProduct" onclick="addProduct()" class="btn btn-primary adminSession hide">Agregar producto</button>
+							<button id="addProduct" onclick="addProduct()"
+								class="btn btn-primary adminSession hide">Agregar producto</button>
 							<button id="addFilter" class="btn btn-primary adminSession hide">Agregar filtro</button>
 						</div>
 
@@ -565,20 +573,21 @@ map.invalidateSize();
 
 
 					</div>
-										<div class="filter-product">
+					<div class="filter-product">
 						<form action="" id="filter-product-13">
-							
+
 						</form>
 					</div>
 					<div class="products2" id="products2-13">
-						<div class="functionPrducts" >
+						<div class="functionPrducts">
 
 
 							<!-- <div class="search-container"><input type="search" class="search-input" id="search-13"
 									placeho lder="Buscar...">
 								<i class="fa fa-search search-icon icon-Search"></i>
 							</div> -->
-							<button id="addProduct" onclick="addProduct()" class="btn btn-primary adminSession hide">Agregar producto</button>
+							<button id="addProduct" onclick="addProduct()"
+								class="btn btn-primary adminSession hide">Agregar producto</button>
 							<button id="addFilter" class="btn btn-primary adminSession hide">Agregar filtro</button>
 						</div>
 
@@ -594,24 +603,25 @@ map.invalidateSize();
 						<div class="title-product">
 							&nbsp;semillas de pastos&nbsp;
 						</div>
-						
+
 					</div>
 					<div class="logo-supliers1">
 						<img src="img/wolf.png">
-					
+
 
 
 					</div>
 
 					<div class="productsmmaq" onscroll="pagination14()" id="products2-14">
-						<div class="functionPrducts" >
+						<div class="functionPrducts">
 
 
 							<!-- <div class="search-container"><input type="search" class="search-input" id="search-13"
 									placeho lder="Buscar...">
 								<i class="fa fa-search search-icon icon-Search"></i>
 							</div> -->
-							<button id="addProduct" onclick="addProduct()" class="btn btn-primary adminSession hide">Agregar producto</button>
+							<button id="addProduct" onclick="addProduct()"
+								class="btn btn-primary adminSession hide">Agregar producto</button>
 						</div>
 
 					</div>
@@ -625,24 +635,25 @@ map.invalidateSize();
 						<div class="title-product">
 							&nbsp;maquinaria y equipos&nbsp;
 						</div>
-						
+
 					</div>
 					<div class="logo-supliers2">
 						<img src="img/matabi.png">
 						<img src="img/xag.png">
-						
+
 
 
 					</div>
 					<div class="products15 productsmmaq" onscroll="pagination14()" id="products2-15">
-						<div class="functionPrducts" >
+						<div class="functionPrducts">
 
 
 							<!-- <div class="search-container"><input type="search" class="search-input" id="search-13"
 									placeho lder="Buscar...">
 								<i class="fa fa-search search-icon icon-Search"></i>
 							</div> -->
-							<button id="addProduct" onclick="addProduct()" class="btn btn-primary adminSession hide">Agregar producto</button>
+							<button id="addProduct" onclick="addProduct()"
+								class="btn btn-primary adminSession hide">Agregar producto</button>
 						</div>
 
 					</div>
@@ -650,12 +661,16 @@ map.invalidateSize();
 				</div>
 			</section>
 			<!-- section 16 -->
-			<section id="tm-section-16" class="tm-section">
-				<div class="products">
-
-
-
+			<section id="tm-section-16" onscroll="paginationNews()" class="tm-section">
+				<div id="newsFather">
+					<div class="nesOptions">
+						<button id="addNew" onclick="addNew()" class="btn btn-primary adminSession hide">Agregar
+							producto</button>
+					</div>
+					<div class="news" id="news">
+					</div>
 				</div>
+
 			</section>
 
 			<!-- section 4 -->
@@ -715,9 +730,9 @@ map.invalidateSize();
 				<nav id="tmMainNav1" class="tm-main-nav">
 					<a href="#products" class="scrolly" data-bg-img="constructive_bg_02.jpg" data-page="#tm-section-2"
 						data-page-type="carousel">
-						<img src="img/Boton-nuestro-p.png"id="nuestro"></a>
-						<img src="img/rednacionalcel.png"id="nuestromovil"class="whocel"></a>
-						<h4 id="nuestromovil"class="texcel">NUESTRO PORTAFOLIO</h4>
+						<img src="img/Boton-nuestro-p.png" id="nuestro"></a>
+					<img src="img/rednacionalcel.png" id="nuestromovil" class="whocel"></a>
+					<h4 id="nuestromovil" class="texcel">NUESTRO PORTAFOLIO</h4>
 
 				</nav>
 			</div>
@@ -726,9 +741,9 @@ map.invalidateSize();
 
 					<a href="#products" class="scrolly" data-bg-img="constructive_bg_02.jpg" data-page="#tm-section-11"
 						data-page-type="carousel">
-						<img src="img/Boton-red-N.png"id="nuestro"></a>
-						<img src="img/ubicacioncel.png"id="nuestromovil"class="whocel"></a>
-						<h4 id="nuestromovil"class="texcel">RED NACIONAL COMERCIAL</h4>
+						<img src="img/Boton-red-N.png" id="nuestro"></a>
+					<img src="img/ubicacioncel.png" id="nuestromovil" class="whocel"></a>
+					<h4 id="nuestromovil" class="texcel">RED NACIONAL COMERCIAL</h4>
 
 
 
@@ -738,20 +753,20 @@ map.invalidateSize();
 				<nav id="tmMainNav1" class="tm-main-nav">
 					<a href="#products" class="scrolly" data-bg-img="constructive_bg_02.jpg" data-page="#tm-section-11"
 						data-page-type="carousel">
-						<img src="img/Boton-contactanos.png"id="nuestro"></a>
-						<img src="img/quienessomoscel.png"id="nuestromovil"class="whocel"></a>
-						<h4 id="nuestromovil"class="texcel">QUIENES SOMOS?</h4>
+						<img src="img/Boton-contactanos.png" id="nuestro"></a>
+					<img src="img/quienessomoscel.png" id="nuestromovil" class="whocel"></a>
+					<h4 id="nuestromovil" class="texcel">QUIENES SOMOS?</h4>
 
 
 				</nav>
 			</div>
-			<div class="whatsapp"id="whatsapp">
+			<div class="whatsapp" id="whatsapp">
 				<nav id="tmMainNav1" class="tm-main-nav">
 					<a href="#products" class="scrolly" data-bg-img="constructive_bg_02.jpg" data-page="#tm-section-11"
 						data-page-type="carousel">
-						<img src="img/Boton-contactanos.png"id="nuestro" ></a>
-						<img src="img/whatsappcel.png"id="nuestromovil"class="whocel"></a>
-						<h4 id="nuestromovil"class="texcel">ALGUNA PREGUNTA? CONTACTANOS</h4>
+						<img src="img/Boton-contactanos.png" id="nuestro"></a>
+					<img src="img/whatsappcel.png" id="nuestromovil" class="whocel"></a>
+					<h4 id="nuestromovil" class="texcel">ALGUNA PREGUNTA? CONTACTANOS</h4>
 
 
 				</nav>
@@ -780,6 +795,7 @@ map.invalidateSize();
 	<script src="js/RequestScripts/RequestScript.js"></script><!-- forms and request -->
 	<script src="js/RequestScripts/ProductRequest.js"></script><!-- forms and request -->
 	<script src="js/RequestScripts/UserRequest.js"></script><!-- forms and request -->
+	<script src="js/RequestScripts/NewsRequest.js"></script><!-- forms and request -->
 	<script src="js/script.js"></script>
 	<script>
 		function mostrarPopup() {
@@ -831,40 +847,40 @@ map.invalidateSize();
 				}
 			});
 			function esMovil() {
-  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-}
+				return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+			}
 
 			function ajustarNav() {
 				if (!esMovil()) {
-				var posicionTmMainNav = $("#TmMainNav").offset();
-				var posicionImgFlag = $("#imgFlag").offset();
-				var posicionMenuBars = $("#TmMainNav").offset();
-				var posicionImglogo = $("#imglogo").offset();
+					var posicionTmMainNav = $("#TmMainNav").offset();
+					var posicionImgFlag = $("#imgFlag").offset();
+					var posicionMenuBars = $("#TmMainNav").offset();
+					var posicionImglogo = $("#imglogo").offset();
 
 
 
-				var posicionBar = $("#bars-menu").offset();
+					var posicionBar = $("#bars-menu").offset();
 
-				$("#tmSideBar").css({
-					"width": ((posicionBar.left + ($("#bars-menu").width() * 3.4)) - posicionImglogo.left) + "px"
-				});
+					$("#tmSideBar").css({
+						"width": ((posicionBar.left + ($("#bars-menu").width() * 3.4)) - posicionImglogo.left) + "px"
+					});
 
-				var posicionSideBar = $("#tmSideBar").offset();
+					var posicionSideBar = $("#tmSideBar").offset();
 
-				posicionTmMainNav = $("#TmMainNav").offset();
-				posicionImgFlag = $("#imgFlag").offset();
-				posicionMenuBars = $("#TmMainNav").offset();
-				posicionImglogo = $("#imglogo").offset();
-
-
-				$("#dropDownBar").css({
-					"top": (posicionSideBar.top + $("#tmSideBar").height()) + "px",
-					"left": (posicionImgFlag.left) + "px",
-					"width": (posicionMenuBars.left - posicionImgFlag.left) + "px"
-				});
+					posicionTmMainNav = $("#TmMainNav").offset();
+					posicionImgFlag = $("#imgFlag").offset();
+					posicionMenuBars = $("#TmMainNav").offset();
+					posicionImglogo = $("#imglogo").offset();
 
 
-			}
+					$("#dropDownBar").css({
+						"top": (posicionSideBar.top + $("#tmSideBar").height()) + "px",
+						"left": (posicionImgFlag.left) + "px",
+						"width": (posicionMenuBars.left - posicionImgFlag.left) + "px"
+					});
+
+
+				}
 			}
 
 			// Ejecutar la función al cargar la página
@@ -985,7 +1001,7 @@ map.invalidateSize();
 					$("footer").hide();
 					// Expected output: "Mangoes and papayas are $2.79 a pound."
 					break;
-				
+
 				default:
 					$("footer").show();
 			}

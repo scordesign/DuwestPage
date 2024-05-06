@@ -1096,6 +1096,86 @@ footer a {
     bottom: -20%;
 }
 
+#modalNotice {
+    overflow: auto;
+    /* Estilos de la barra de desplazamiento */
+}
+
+/* WebKit (Chrome, Safari, Opera) */
+#modalNotice::-webkit-scrollbar {
+    width: 8px;
+    /* Ancho de la barra */
+}
+
+#modalNotice::-webkit-scrollbar-thumb {
+    background-color:rgba(255, 255, 255);
+    /* Color del thumb (el control deslizante) */
+    border-radius: 4px;
+    /* Radio de borde del thumb */
+}
+
+/* Firefox */
+#modalNotice::-moz-scrollbar {  
+    width: 8px;
+}
+
+#modalNotice::-moz-scrollbar-thumb {
+    background-color: rgba(255, 255, 255);
+    border-radius: 4px;
+}
+
+/* Internet Explorer */
+#modalNotice {
+    scrollbar-width: thin;
+    /* Ancho de la barra en IE/Edge */
+    scrollbar-color: rgba(255, 255, 255,0.5) transparent;
+    /* Color de la barra y del thumb en IE/Edge */
+}
+
+
+#modalNotice {
+    border-radius: 2%;
+    position: relative;
+    width: 50%;
+    height: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    overflow: auto;
+}
+
+#modalLogoNotice {
+    position: relative;
+    margin-top: 8vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+    height: auto;
+    display: block;
+}
+
+#modalBackgroundNotice {
+    position: fixed;
+    background-color: rgba(24, 24, 24, 0.7);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    height: 100%;
+    z-index: 9999999;
+
+}
+
+#closeModalNotice {
+    right: 25.5%;
+    position: fixed;
+    max-height: 6%;
+    padding: 1%;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+
+
 /* Estilos para la barra de desplazamiento en el div con la clase "scrollable" */
 #modal {
     overflow: auto;
@@ -1195,6 +1275,7 @@ footer a {
     color: black;
     font-family: 'Centuri Gothic', sans-serif;
 }
+
 
 #miFormulario input {
     width: calc(100% - 20px);
@@ -1348,6 +1429,167 @@ footer a {
     background-repeat: no-repeat;
     background-size: cover;
 } */
+
+#tm-section-16{
+    overflow: auto;
+    width: 100%;
+    background-color: white;
+    background-image: url(../img/fondo-7.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.nesOptions{
+    position: relative;
+    margin-top: 2%;
+    margin-left: 3.5%;
+    height: 10vh;
+}
+
+.news{
+    position: relative;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
+}
+
+.divNewImage{
+    width: 56%;
+    height: 100%;
+    border-radius: 5px;
+    margin-right: 2%;
+    align-items: center;
+    text-align: center;
+    background: white;
+}
+.divNewImage img{
+    max-width: 100%;
+    height: 100%;
+}
+.divNewDesc{
+    width: 40%;
+    height: 100%;
+    border-radius: 5px;
+    margin-left: 2%;    
+    padding: 1%;
+}
+.divNewDesc p {
+    font-size: 17px;
+}
+
+.divNewDesc a{
+    font-size: 17px;
+}
+
+.backgreen{
+    background: rgba(0, 104, 56, 1);
+    background-image: url(../img/fondo-7.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.backgreenLess{
+    background: rgba(166, 202, 86, 1);
+    background-image: url(../img/fondo-7.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgba(0, 104, 56, 1);
+    
+}
+.backgreenGray{
+    background: rgba(73, 71, 69, 0.6);
+    background-image: url(../img/fondo-7.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.divNew{
+    display: inline-flex;
+    height: 30vh;
+    width: 100%;
+    margin: 2vh 0vw;
+}
+
+#fatherNewModal {
+    margin: 5%;
+}
+
+#infoNew {
+    margin: 5%;
+}
+
+#fatherNewModal #myCarouselNew{
+    height: 30vh;
+}
+
+#fatherNewModal #myCarouselNew .carousel-inner{
+    height: 30vh;
+    text-align: center;
+    align-items: center;
+}
+#fatherNewModal #myCarouselNew .carousel-inner div img {
+    max-height: 30vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#CarruselDirection{
+    height: 5vh;
+    display: inline-flex;
+    align-items: center;
+    margin-left: 45%;
+}
+
+#CarruselDirection a{
+    color: white;
+    font-size: 4vh;
+    cursor: pointer;
+}
+
+#CarruselDirection img{
+ width: auto;
+ height: 100%;
+ margin-left: 0.5vw;
+ margin-right: 0.5vw;
+}
+
+#infoNew h5 {
+    font-size: calc(0.8vh + 0.8vw);
+}
+
+#infoNewDesc {
+    text-align: justify;
+    font-size: calc(0.63vh + 0.63vw);
+    line-height: calc(0.7vh + 0.7vw);
+}
+
+#miFormulario h4{
+    color: black;
+}
+
+.descNew{
+    text-align: justify;
+    font-size: calc(0.63vh + 0.63vw);
+    line-height: calc(0.7vh + 0.7vw);
+}
+
+.titleNew{
+    font-size: calc(0.8vh + 0.8vw);
+}
+
+.buttonNew{
+    background: rgba(255, 255, 255, 0);
+    border-radius: 6px;
+    color: white;
+    padding: 0% 1%;
+    border-color: white;
+
+}
+
+#newsFather{
+    margin-bottom: 2vh;
+}
+
 
 #tm-section-12 ,#tm-section-13 , #tm-section-14 ,#tm-section-15 {
     overflow: auto;

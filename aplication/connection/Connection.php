@@ -1,17 +1,17 @@
 <?php
 class Conexion {
     //mac
-    //  private $host = 'localhost:8889';
-    // private $usuario = 'root';
-    //   private $contrasena = 'root';
-     // private $nombre_bd = 'duwest_main';
+      private $host = 'localhost:8889';
+            private $usuario = 'root';
+    private $contrasena = 'root';
+    private $nombre_bd = 'duwest_main';
 
     // pc
-    private $host = 'localhost';
-    private $usuario = 'root';
-    private $contrasena = '';
+    // private $host = 'localhost';
+    // private $usuario = 'root';
+    // private $contrasena = '';
 
-    private $nombre_bd = 'duwest_main';
+    // private $nombre_bd = 'duwest_main';
     private $conexion;
 
     public function __construct() {
