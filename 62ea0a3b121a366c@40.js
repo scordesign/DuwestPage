@@ -46,11 +46,11 @@ function _map(d3,colombiaGeoJSON)
   var mapLayer = g.append('g')
     .classed('map-layer', true);
 
-  var dummyText = g.append('text')
-    .classed('dummy-text', true)
-    .attr('x', 10)
-    .attr('y', 30)
-    .style('opacity', 0);
+  // var dummyText = g.append('text')
+  //   .classed('dummy-text', true)
+  //   .attr('x', 10)
+  //   .attr('y', 30)
+  //   .style('opacity', 0);
 
   var bigText = g.append('text')
     .classed('big-text', true)
@@ -77,6 +77,14 @@ function _map(d3,colombiaGeoJSON)
   // When clicked, zoom in
   function clicked(d) {
     var x, y, k;
+    // Get information about the clicked department from its properties
+  const departmentInfo = d.properties;  // Assuming department information is in properties
+
+  // Update a DOM element (outside this function) to display the information
+  document.getElementById('department-info').innerHTML = `
+    <h2>Selected Department: ${departmentInfo.NOMBRE_DPT}</h2>
+    `;
+}
 
     // Compute centroid of the selected path
     if (d && centered !== d) {
@@ -97,9 +105,9 @@ function _map(d3,colombiaGeoJSON)
       .style('fill', function(d){return centered && d===centered ? '#008F39' : fillFn(d);});
 
     // Zoom
-    g.transition()
-      .duration(750)
-      .attr('transform', 'translate(' + width / 2 + ',' + height / 2 + ')scale(' + k + ')translate(' + -x + ',' + -y + ')');
+   // g.transition()
+     // .duration(750)
+      //.attr('transform', 'translate(' + width / 2 + ',' + height / 2 + ')scale(' + k + ')translate(' + -x + ',' + -y + ')');
   }
 
   function mouseover(d){
@@ -258,7 +266,7 @@ function _map(d3,colombiaGeoJSON)
 
 
 function _colombiaGeoJSON(d3){return(
-d3.json("https://raw.githubusercontent.com/scordesign/DuwestPage/main/colombia.geo.json")
+d3.json("https://gist.githubusercontent.com/john-guerra/43c7656821069d00dcbc/raw/3aadedf47badbdac823b00dbe259f6bc6d9e1899/colombia.geo.json")
 )}
 
 function _4(html){return(
